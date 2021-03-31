@@ -8,7 +8,7 @@
     <title>Communication &#8212; NCAR-ESDS 0.1 documentation</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
-  <link href="../_static/css/index.101715efdecc9b59cb6e1ddfa685c31f.css" rel="stylesheet" />
+  <link href="../_static/css/index.f6b7ca918bee2f46fd9abac01cfb07d5.css" rel="stylesheet" />
 
     
   <link rel="stylesheet"
@@ -30,13 +30,47 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.d8bbf5861d671d414e1a.js">
+  <link rel="preload" as="script" href="../_static/js/index.1e043a052b0af929e4d8.js">
 
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/togglebutton.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "NCAR/esds");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <link rel="author" title="About these documents" href="../about/" />
     <link rel="index" title="Index" href="../genindex/" />
@@ -102,8 +136,8 @@
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../projects/">
-  Projects
+ <a class="reference internal nav-link" href="../faq/">
+  Frequently Asked Questions
  </a>
 </li>
 
@@ -156,9 +190,29 @@
           
           <div class="d-none d-xl-block col-xl-2 bd-toc">
               
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
 
 <nav id="bd-toc-nav">
-    
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#discourse">
+   Discourse
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#zulip">
+   Zulip
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#esds-github-repository">
+   ESDS Github Repository
+  </a>
+ </li>
+</ul>
+
 </nav>
 
 
@@ -175,7 +229,20 @@
               <div>
                  <div class="section" id="communication">
 <h1>Communication<a class="headerlink" href="#communication" title="Permalink to this headline">¶</a></h1>
-<p>This covers how we communicate</p>
+<p>We use three primary platforms for communicating and collaborating. They include:</p>
+<div class="section" id="discourse">
+<h2><a class="reference external" href="https://discourse-nsa.ucar.edu/">Discourse</a><a class="headerlink" href="#discourse" title="Permalink to this headline">¶</a></h2>
+<p>Discourse offers a community where users can ask questions and share progress on various projects. It is setup similarly to the <a class="reference external" href="https://discourse.pangeo.io/">Pangeo discourse</a>. You will need to register for an account, but once registered and logged on, be sure to follow the ESDS channel on this platform.</p>
+</div>
+<div class="section" id="zulip">
+<h2><a class="reference external" href="https://zulip.ucar.edu/">Zulip</a><a class="headerlink" href="#zulip" title="Permalink to this headline">¶</a></h2>
+<p>Zulip is an asynchronous messaging platform, run in-house at UCAR, which
+can be used for both private messages and messages seperated by topic. When posting in a specific “channel”, the user must add a topic, which makes it easier to track various conversations and refer back to communications at a later time.</p>
+</div>
+<div class="section" id="esds-github-repository">
+<h2><a class="reference external" href="https://ncar.github.io/esds/">ESDS Github Repository</a><a class="headerlink" href="#esds-github-repository" title="Permalink to this headline">¶</a></h2>
+<p>This repository and webpage is a space where we can post progress on this initiative, publish blog posts related to various workflows, document “best practices,” in addition to serving as a resource/discussion spot via comments on pages and posts.</p>
+</div>
 </div>
 
 <div class="section">
@@ -198,14 +265,14 @@
     </div>
 
     
-  <script src="../_static/js/index.d8bbf5861d671d414e1a.js"></script>
+  <script src="../_static/js/index.1e043a052b0af929e4d8.js"></script>
 
 
     <footer class="footer mt-5 mt-md-0">
   <div class="container">
     <p>
           &copy; Copyright 2021, NCAR Earth System Data Science Team.<br/>
-        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.2.<br/>
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.3.<br/>
     </p>
   </div>
 </footer>

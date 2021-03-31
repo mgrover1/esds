@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Projects &#8212; NCAR-ESDS 0.1 documentation</title>
+    <title>ncar.github.io/esds &#8212; NCAR-ESDS 0.1 documentation</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
-  <link href="../_static/css/index.101715efdecc9b59cb6e1ddfa685c31f.css" rel="stylesheet" />
+  <link href="../_static/css/index.f6b7ca918bee2f46fd9abac01cfb07d5.css" rel="stylesheet" />
 
     
   <link rel="stylesheet"
@@ -30,19 +30,51 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.d8bbf5861d671d414e1a.js">
+  <link rel="preload" as="script" href="../_static/js/index.1e043a052b0af929e4d8.js">
 
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/togglebutton.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "NCAR/esds");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <link rel="author" title="About these documents" href="../about/" />
     <link rel="index" title="Index" href="../genindex/" />
-    <link rel="search" title="Search" href="../search/" />
-    <link rel="next" title="Blog" href="../blog/" />
-    <link rel="prev" title="About Us" href="../about/" /> 
+    <link rel="search" title="Search" href="../search/" /> 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" /> 
 <link
@@ -102,9 +134,9 @@
  </a>
 </li>
 
-<li class="toctree-l1 current active nav-item">
- <a class="current reference internal nav-link" href="#">
-  Projects
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../faq/">
+  Frequently Asked Questions
  </a>
 </li>
 
@@ -174,9 +206,11 @@
           <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
               
               <div>
-                 <div class="section" id="projects">
-<h1>Projects<a class="headerlink" href="#projects" title="Permalink to this headline">¶</a></h1>
-<p>This covers the wide variety of projects we work on.</p>
+                 <div class="section" id="ncar-github-io-esds">
+<h1><a class="reference external" href="https://ncar.github.io/esds/">ncar.github.io/esds</a><a class="headerlink" href="#ncar-github-io-esds" title="Permalink to this headline">¶</a></h1>
+<p><img alt="GitHub Workflow Status (branch)" src="https://img.shields.io/github/workflow/status/NCAR/esds/deploy-website/main?logo=github&amp;style=for-the-badge" />
+<img alt="GitHub Workflow Status (branch)" src="https://img.shields.io/github/workflow/status/NCAR/esds/linting/main?label=linting&amp;logo=github&amp;style=for-the-badge" /></p>
+<p>Repository for hosting material related to Earth System Data Science Initiative efforts. The contents are posted at <a class="reference external" href="https://ncar.github.io/esds/">ncar.github.io/esds</a>.</p>
 </div>
 
 <div class="section">
@@ -188,8 +222,6 @@
               
               <div class='prev-next-bottom'>
                 
-    <a class='left-prev' id="prev-link" href="../about/" title="previous page">About Us</a>
-    <a class='right-next' id="next-link" href="../blog/" title="next page">Blog</a>
 
               </div>
               
@@ -200,14 +232,14 @@
     </div>
 
     
-  <script src="../_static/js/index.d8bbf5861d671d414e1a.js"></script>
+  <script src="../_static/js/index.1e043a052b0af929e4d8.js"></script>
 
 
     <footer class="footer mt-5 mt-md-0">
   <div class="container">
     <p>
           &copy; Copyright 2021, NCAR Earth System Data Science Team.<br/>
-        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.2.<br/>
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.3.<br/>
     </p>
   </div>
 </footer>
