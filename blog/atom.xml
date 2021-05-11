@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>ncar.github.io/esds/</id>
   <title>NCAR ESDS</title>
-  <updated>2021-03-31T15:07:21.106906+00:00</updated>
+  <updated>2021-05-11T15:26:39.901486+00:00</updated>
   <link href="ncar.github.io/esds/"/>
   <link href="ncar.github.io/esds/blog/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.17">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.18">ABlog</generator>
   <entry>
     <id>ncar.github.io/esds/posts/Interactive_Dashboard/</id>
     <title>HiRes-CESM Interactive Dashboard Example</title>
@@ -38,5 +38,124 @@
     <category term="cgd" label="cgd"/>
     <category term="questions" label="questions"/>
     <published>2021-03-26T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>ncar.github.io/esds/posts/software-citation/</id>
+    <title>The Importance of Software Citation</title>
+    <updated>2021-04-02T00:00:00+00:00</updated>
+    <author>
+      <name>Max Grover</name>
+    </author>
+    <content type="html">&lt;p&gt;One of the questions that came up during the &lt;a class="reference external" href="https://ncar.github.io/esds/posts/esds-blog/"&gt;ESDS Town Hall&lt;/a&gt; was how do scientists/developers get credit toward their efforts in developing open-source code? Software that is used by the wider community should received the acknowledgment and recognition it deserves.&lt;/p&gt;
+&lt;p&gt;Data and academic publication citations have become popular in the literature, but often times, software is not cited… which can be arguably just as important to the work as the data.&lt;/p&gt;
+</content>
+    <link href="ncar.github.io/esds/posts/software-citation/" rel="alternate"/>
+    <summary>One of the questions that came up during the ESDS Town Hall was how do scientists/developers get credit toward their efforts in developing open-source code? Software that is used by the wider community should received the acknowledgment and recognition it deserves.Data and academic publication citations have become popular in the literature, but often times, software is not cited… which can be arguably just as important to the work as the data.</summary>
+    <category term="open-science" label="open-science"/>
+    <category term="citation" label="citation"/>
+    <category term="software" label="software"/>
+    <published>2021-04-02T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>ncar.github.io/esds/posts/casper_pbs_dask/</id>
+    <title>Using Dask on the New Casper PBS Scheduler</title>
+    <updated>2021-04-06T00:00:00+00:00</updated>
+    <author>
+      <name>Max Grover</name>
+    </author>
+    <content type="html">&lt;p&gt;Non-consecutive header level increase; 0 to 2 [myst.header]&lt;/p&gt;
+&lt;p&gt;Casper will complete a transition from Slurm to the PBS Pro workload manager on April 7, 2021. This has implications for how to spin up a Dask cluster, including via the &lt;a class="reference external" href="https://jupyterhub.ucar.edu"&gt;NCAR Jupyterhub&lt;/a&gt;.&lt;/p&gt;
+</content>
+    <link href="ncar.github.io/esds/posts/casper_pbs_dask/" rel="alternate"/>
+    <summary>Non-consecutive header level increase; 0 to 2 [myst.header]Casper will complete a transition from Slurm to the PBS Pro workload manager on April 7, 2021. This has implications for how to spin up a Dask cluster, including via the NCAR Jupyterhub.</summary>
+    <category term="jupyterhub" label="jupyterhub"/>
+    <category term="dask" label="dask"/>
+    <published>2021-04-06T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>ncar.github.io/esds/posts/intake_esm_dask/</id>
+    <title>An Example of Using Intake-ESM</title>
+    <updated>2021-04-09T00:00:00+00:00</updated>
+    <author>
+      <name>Max Grover</name>
+    </author>
+    <content type="html">&lt;p&gt;This past week, NCAR CISL updated the Casper Node to use PBS instead of Slurm for scheduling jobs. This led a post in which an example of spinning up dask clusters on the new configuration. This was also an opportunity to dig into dask, and try applying it to a sample task, specifically looking at ecosystem variables in the CESM-LE dataset, using notebooks included in Matt Long’s &lt;a class="reference external" href="https://github.com/matt-long/krill-cesm-le"&gt;krill-cesm-le repository&lt;/a&gt;, modified by Kristen Krumhardt.&lt;/p&gt;
+&lt;p&gt;Here, we spin up our dask cluster. At first, running this notebook resulted in a &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;killed&lt;/span&gt; &lt;span class="pre"&gt;worker&lt;/span&gt;&lt;/code&gt; error. After further expection, we noticed that additional resources would be needed to read in the notebook since the data are so large (on the order of ~1-2 TB). Increasing the individual worker to a higher amount (ex. 256 GB) solved the issue. Scale up to as many workers as you think are neccessary for the calculation (this may take some trial and error).&lt;/p&gt;
+</content>
+    <link href="ncar.github.io/esds/posts/intake_esm_dask/" rel="alternate"/>
+    <summary>This past week, NCAR CISL updated the Casper Node to use PBS instead of Slurm for scheduling jobs. This led a post in which an example of spinning up dask clusters on the new configuration. This was also an opportunity to dig into dask, and try applying it to a sample task, specifically looking at ecosystem variables in the CESM-LE dataset, using notebooks included in Matt Long’s krill-cesm-le repository, modified by Kristen Krumhardt.Here, we spin up our dask cluster. At first, running this notebook resulted in a killed worker error. After further expection, we noticed that additional resources would be needed to read in the notebook since the data are so large (on the order of ~1-2 TB). Increasing the individual worker to a higher amount (ex. 256 GB) solved the issue. Scale up to as many workers as you think are neccessary for the calculation (this may take some trial and error).</summary>
+    <category term="dask" label="dask"/>
+    <category term="intake" label="intake"/>
+    <category term="cesm" label="cesm"/>
+    <published>2021-04-09T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>ncar.github.io/esds/posts/ncar-jobqueue-example/</id>
+    <title>NCAR-Jobqueue</title>
+    <updated>2021-04-15T00:00:00+00:00</updated>
+    <author>
+      <name>Max Grover</name>
+    </author>
+    <content type="html">&lt;p&gt;Last week, we added posts detailing how to configure &lt;a class="reference external" href="https://docs.dask.org/en/latest/"&gt;Dask&lt;/a&gt; using the new PBS scheduler on &lt;a class="reference external" href="https://www2.cisl.ucar.edu/resources/computational-systems/casper"&gt;Casper&lt;/a&gt;. In this week’s example, we provide an example of the recent updates to &lt;a class="reference external" href="https://github.com/NCAR/ncar-jobqueue"&gt;ncar-jobqueue&lt;/a&gt;, added by &lt;a class="reference external" href="https://github.com/andersy005"&gt;Anderson Banihirwe&lt;/a&gt;, which allow users to easily configure dask on Casper without having to add many extra steps.&lt;/p&gt;
+&lt;p&gt;You must update the package to use the newest updates. You can update using conda!&lt;/p&gt;
+</content>
+    <link href="ncar.github.io/esds/posts/ncar-jobqueue-example/" rel="alternate"/>
+    <summary>Last week, we added posts detailing how to configure Dask using the new PBS scheduler on Casper. In this week’s example, we provide an example of the recent updates to ncar-jobqueue, added by Anderson Banihirwe, which allow users to easily configure dask on Casper without having to add many extra steps.You must update the package to use the newest updates. You can update using conda!</summary>
+    <category term="jupyterhub" label="jupyterhub"/>
+    <category term="dask" label="dask"/>
+    <category term="ncar" label="ncar"/>
+    <published>2021-04-15T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>ncar.github.io/esds/posts/multiple_index_xarray_xoak/</id>
+    <title>Indexing unstructured grids with the Power of Xoak</title>
+    <updated>2021-04-23T00:00:00+00:00</updated>
+    <author>
+      <name>Max Grover</name>
+    </author>
+    <content type="html">&lt;p&gt;This week, there a post within the Zulip regarding how to deal with indexing &lt;a class="reference external" href="https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2017MS001257"&gt;CAM-SE&lt;/a&gt; data. The tricky part here is that is an unstructured grid, where there is only one column to the data, &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;ncol&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Here is an example of the dataset we are working with. Notice that both lat and lon have the same dimension, &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;ncol&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
+</content>
+    <link href="ncar.github.io/esds/posts/multiple_index_xarray_xoak/" rel="alternate"/>
+    <summary>This week, there a post within the Zulip regarding how to deal with indexing CAM-SE data. The tricky part here is that is an unstructured grid, where there is only one column to the data, ncol.Here is an example of the dataset we are working with. Notice that both lat and lon have the same dimension, ncol.</summary>
+    <category term="xarray" label="xarray"/>
+    <category term="xoak" label="xoak"/>
+    <category term="index" label="index"/>
+    <published>2021-04-23T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>ncar.github.io/esds/posts/map_blocks_example/</id>
+    <title>How to Use xarray.map_blocks for Vertical Interpolation of a 3D Field</title>
+    <updated>2021-04-28T00:00:00+00:00</updated>
+    <author>
+      <name>Max Grover</name>
+    </author>
+    <content type="html">&lt;p&gt;Within this example, we cover how to use &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;xarray.map_blocks&lt;/span&gt;&lt;/code&gt; to calculate the mixed-layer depth within the CESM POP model output.&lt;/p&gt;
+&lt;p&gt;This calculation is “embarassingly parallel” such that each calculation is done within a single a column. The calculation &lt;strong&gt;&lt;em&gt;should&lt;/em&gt;&lt;/strong&gt; be easily computed within each column across the model domain. This is where &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;map_blocks&lt;/span&gt;&lt;/code&gt; can be used to improve the performance of this metric.&lt;/p&gt;
+&lt;img alt="MLD example plot" src="../_images/mld_example_plot.png" /&gt;
+</content>
+    <link href="ncar.github.io/esds/posts/map_blocks_example/" rel="alternate"/>
+    <summary>Within this example, we cover how to use xarray.map_blocks to calculate the mixed-layer depth within the CESM POP model output.This calculation is “embarassingly parallel” such that each calculation is done within a single a column. The calculation should be easily computed within each column across the model domain. This is where map_blocks can be used to improve the performance of this metric.MLD example plot</summary>
+    <category term="xarray" label="xarray"/>
+    <category term="dask" label="dask"/>
+    <category term="pop" label="pop"/>
+    <published>2021-04-28T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>ncar.github.io/esds/posts/paired_programming_vs/</id>
+    <title>Paired Programming using VS Code</title>
+    <updated>2021-05-06T00:00:00+00:00</updated>
+    <author>
+      <name>Max Grover</name>
+    </author>
+    <content type="html">&lt;p&gt;A common task when developing notebooks or packages is collaborating with others. It can be challenging to do this when using JupyterHub since two people cannot access the same notebook at same time. One solution to this is to use Visual Studio Code (VS Code) to remotely access Casper/Cheyenne, use a virtual meeting plaform (Zoom, Google Meet), and interactively collaborate on development.&lt;/p&gt;
+&lt;p&gt;This process includes a few steps:&lt;/p&gt;
+</content>
+    <link href="ncar.github.io/esds/posts/paired_programming_vs/" rel="alternate"/>
+    <summary>A common task when developing notebooks or packages is collaborating with others. It can be challenging to do this when using JupyterHub since two people cannot access the same notebook at same time. One solution to this is to use Visual Studio Code (VS Code) to remotely access Casper/Cheyenne, use a virtual meeting plaform (Zoom, Google Meet), and interactively collaborate on development.This process includes a few steps:</summary>
+    <category term="editor" label="editor"/>
+    <category term="paired-programming" label="paired-programming"/>
+    <category term="remote-access" label="remote-access"/>
+    <published>2021-05-06T00:00:00+00:00</published>
   </entry>
 </feed>

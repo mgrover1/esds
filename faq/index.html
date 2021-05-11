@@ -8,7 +8,7 @@
     <title>Frequently Asked Questions &#8212; NCAR-ESDS 0.1 documentation</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
-  <link href="../_static/css/index.f6b7ca918bee2f46fd9abac01cfb07d5.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
 
     
   <link rel="stylesheet"
@@ -30,7 +30,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.1e043a052b0af929e4d8.js">
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -78,7 +78,8 @@ commentsRunWhenDOMLoaded(addUtterances);
     <link rel="next" title="Blog" href="../blog/" />
     <link rel="prev" title="About Us" href="../about/" /> 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" /> 
+    <meta name="docsearch:language" content="en" />
+     
 <link
   rel="alternate"
   type="application/atom+xml"
@@ -114,23 +115,32 @@ commentsRunWhenDOMLoaded(addUtterances);
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
     
+    <div class="container-fluid" id="banner"></div>
+
+    
     <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
 
+  <div id="navbar-start">
+    
+    
+<a class="navbar-brand" href="../">
+<p class="title">NCAR-ESDS</p>
+</a>
 
     
-    <a class="navbar-brand" href="../">
-      <p class="title">NCAR-ESDS</p>
-    </a>
-    
+  </div>
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-    
-    <div id="navbar-menu" class="col-lg-9 collapse navbar-collapse">
-      <ul id="navbar-main-elements" class="navbar-nav mr-auto">
-        <li class="toctree-l1 nav-item">
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../about/">
   About Us
  </a>
@@ -154,14 +164,16 @@ commentsRunWhenDOMLoaded(addUtterances);
  </a>
 </li>
 
-        
-      </ul>
+    
+</ul>
+      </div>
+      
+    </div>
 
-      <form class="bd-search d-flex align-items-center" action="../search/" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this site... " aria-label="Search this site... " autocomplete="off" >
-</form>
-      <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
         <li class="nav-item">
           <a class="nav-link" href="https://github.com/ncar/esds" rel="noopener" target="_blank" title="GitHub">
             <span><i class="fab fa-github-square"></i></span>
@@ -169,7 +181,10 @@ commentsRunWhenDOMLoaded(addUtterances);
           </a>
         </li>
       </ul>
+      </div>
+      
     </div>
+  </div>
 </div>
     </nav>
     
@@ -179,18 +194,25 @@ commentsRunWhenDOMLoaded(addUtterances);
           
             
             <!-- Only show if we have sidebars configured, else just a small margin  -->
-            <div class="col-12 col-md-3 bd-sidebar"><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-  <div class="bd-toc-item active">
-    
+            <div class="col-12 col-md-3 bd-sidebar"><div class="bio-info">
+  <div class="name">Earth System Data Science initiative at NCAR</div>
+
+  <div class="whatido">
+    Building an inclusive sociotechnical network to promote effective synthesis
+    and interpretation of data relevant to solving problems in Earth system
+    science and supporting decisions within stakeholder communities.
   </div>
-</nav>
+</div>
             </div>
             
           
 
           
           <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
               
+              <div class="toc-item">
+                
 <div class="tocsection onthispage pt-5 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
@@ -276,12 +298,40 @@ commentsRunWhenDOMLoaded(addUtterances);
    </li>
   </ul>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#github">
+   Github
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#setting-up-github-authentication">
+     Setting up Github Authentication
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cesm-data">
+   CESM Data
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dealing-with-cesm-monthly-output-is-there-something-wrong-with-time">
+     Dealing with CESM monthly output - is there something wrong with time
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 
 </nav>
-
-
+              </div>
               
+              <div class="toc-item">
+                
+              </div>
+              
+            
           </div>
           
 
@@ -434,6 +484,83 @@ in a serial context.</p>
 <p>If you see no pending worker jobs, then verify that you have called <code class="docutils literal notranslate"><span class="pre">cluster.scale()</span></code>.</p>
 </div>
 </div>
+<div class="section" id="github">
+<h2>Github<a class="headerlink" href="#github" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="setting-up-github-authentication">
+<h3>Setting up Github Authentication<a class="headerlink" href="#setting-up-github-authentication" title="Permalink to this headline">¶</a></h3>
+<p>Beginning August 13, 2021, Github will no longer accept account passwords when authenticating git operations. There are essentially two options, which Github provides proper documentation for getting setup:</p>
+<ol class="simple">
+<li><p><a class="reference external" href="https://docs.github.com/en/github/authenticating-to-github/securing-your-account-with-two-factor-authentication-2fa">Setup two-factor authentication</a></p></li>
+<li><p><a class="reference external" href="https://docs.github.com/en/github-ae&#64;latest/github/authenticating-to-github/connecting-to-github-with-ssh">Connect to Github via SSH</a></p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="cesm-data">
+<h2>CESM Data<a class="headerlink" href="#cesm-data" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="dealing-with-cesm-monthly-output-is-there-something-wrong-with-time">
+<h3>Dealing with CESM monthly output - is there something wrong with time<a class="headerlink" href="#dealing-with-cesm-monthly-output-is-there-something-wrong-with-time" title="Permalink to this headline">¶</a></h3>
+<p>A well known issue of CESM data is that timestamps for fields saved as averages are placed at the end of the averaging period. For instance, in the following example, the <code class="docutils literal notranslate"><span class="pre">January/1920</span></code> average has a timestamp of <code class="docutils literal notranslate"><span class="pre">February/1920</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">25</span><span class="p">]:</span> <span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;/glade/collections/cdg/data/cesmLE/CESM-CAM5-BGC-LE/atm/proc/tseries/monthly/TS/b.e11.B20TRC5CNBDRD.f09_g16.011.cam.h0.TS.192001-200512.nc&#39;</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">33</span><span class="p">]:</span> <span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">34</span><span class="p">]:</span> <span class="n">ds</span><span class="o">.</span><span class="n">time</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">34</span><span class="p">]:</span>
+<span class="o">&lt;</span><span class="n">xarray</span><span class="o">.</span><span class="n">DataArray</span> <span class="s1">&#39;time&#39;</span> <span class="p">(</span><span class="n">time</span><span class="p">:</span> <span class="mi">1032</span><span class="p">)</span><span class="o">&gt;</span>
+<span class="n">array</span><span class="p">([</span><span class="n">cftime</span><span class="o">.</span><span class="n">DatetimeNoLeap</span><span class="p">(</span><span class="mi">1920</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+       <span class="n">cftime</span><span class="o">.</span><span class="n">DatetimeNoLeap</span><span class="p">(</span><span class="mi">1920</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+       <span class="n">cftime</span><span class="o">.</span><span class="n">DatetimeNoLeap</span><span class="p">(</span><span class="mi">1920</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="o">...</span><span class="p">,</span>
+       <span class="n">cftime</span><span class="o">.</span><span class="n">DatetimeNoLeap</span><span class="p">(</span><span class="mi">2005</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+       <span class="n">cftime</span><span class="o">.</span><span class="n">DatetimeNoLeap</span><span class="p">(</span><span class="mi">2005</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+       <span class="n">cftime</span><span class="o">.</span><span class="n">DatetimeNoLeap</span><span class="p">(</span><span class="mi">2006</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)],</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">object</span><span class="p">)</span>
+<span class="n">Coordinates</span><span class="p">:</span>
+  <span class="o">*</span> <span class="n">time</span>     <span class="p">(</span><span class="n">time</span><span class="p">)</span> <span class="nb">object</span> <span class="mi">1920</span><span class="o">-</span><span class="mi">02</span><span class="o">-</span><span class="mi">01</span> <span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span> <span class="o">...</span> <span class="mi">2006</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">01</span> <span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span>
+<span class="n">Attributes</span><span class="p">:</span>
+    <span class="n">long_name</span><span class="p">:</span>  <span class="n">time</span>
+    <span class="n">bounds</span><span class="p">:</span>     <span class="n">time_bnds</span>
+</pre></div>
+</div>
+<p>A temporary workaround is to fix the issue ourselves by computing new time axis by averaging the time bounds:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">29</span><span class="p">]:</span> <span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">30</span><span class="p">]:</span> <span class="kn">import</span> <span class="nn">cf_xarray</span> <span class="c1"># use cf-xarray so that we can use CF attributes</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">31</span><span class="p">]:</span> <span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;/glade/collections/cdg/data/cesmLE/CESM-CAM5-BGC-LE/atm/proc/tseries/monthly/TS/b.e11.B20TRC5CNBDRD.f09_g16.011.cam.h0.TS.192001-200512.nc&#39;</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">32</span><span class="p">]:</span> <span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">34</span><span class="p">]:</span> <span class="n">attrs</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">attrs</span><span class="o">.</span><span class="n">copy</span><span class="p">(),</span> <span class="n">ds</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">encoding</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">36</span><span class="p">]:</span> <span class="n">time_bounds</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">cf</span><span class="o">.</span><span class="n">get_bounds</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">)</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">37</span><span class="p">]:</span> <span class="n">time_bounds_dim_name</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">cf</span><span class="o">.</span><span class="n">get_bounds_dim_name</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">)</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">38</span><span class="p">]:</span> <span class="n">ds</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">assign_coords</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="n">time_bounds</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">time_bounds_dim_name</span><span class="p">))</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">39</span><span class="p">]:</span> <span class="n">ds</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">attrs</span><span class="p">,</span> <span class="n">ds</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">encoding</span> <span class="o">=</span> <span class="n">attrs</span><span class="p">,</span> <span class="n">encoding</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">40</span><span class="p">]:</span> <span class="n">ds</span><span class="o">.</span><span class="n">time</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">40</span><span class="p">]:</span>
+<span class="o">&lt;</span><span class="n">xarray</span><span class="o">.</span><span class="n">DataArray</span> <span class="s1">&#39;time&#39;</span> <span class="p">(</span><span class="n">time</span><span class="p">:</span> <span class="mi">1032</span><span class="p">)</span><span class="o">&gt;</span>
+<span class="n">array</span><span class="p">([</span><span class="n">cftime</span><span class="o">.</span><span class="n">DatetimeNoLeap</span><span class="p">(</span><span class="mi">1920</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+       <span class="n">cftime</span><span class="o">.</span><span class="n">DatetimeNoLeap</span><span class="p">(</span><span class="mi">1920</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+       <span class="n">cftime</span><span class="o">.</span><span class="n">DatetimeNoLeap</span><span class="p">(</span><span class="mi">1920</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="o">...</span><span class="p">,</span>
+       <span class="n">cftime</span><span class="o">.</span><span class="n">DatetimeNoLeap</span><span class="p">(</span><span class="mi">2005</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+       <span class="n">cftime</span><span class="o">.</span><span class="n">DatetimeNoLeap</span><span class="p">(</span><span class="mi">2005</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+       <span class="n">cftime</span><span class="o">.</span><span class="n">DatetimeNoLeap</span><span class="p">(</span><span class="mi">2005</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)],</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">object</span><span class="p">)</span>
+<span class="n">Coordinates</span><span class="p">:</span>
+  <span class="o">*</span> <span class="n">time</span>     <span class="p">(</span><span class="n">time</span><span class="p">)</span> <span class="nb">object</span> <span class="mi">1920</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">16</span> <span class="mi">12</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span> <span class="o">...</span> <span class="mi">2005</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">16</span> <span class="mi">12</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span>
+<span class="n">Attributes</span><span class="p">:</span>
+    <span class="n">long_name</span><span class="p">:</span>  <span class="n">time</span>
+    <span class="n">bounds</span><span class="p">:</span>     <span class="n">time_bnds</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>cf-xarray can be installed via pip or conda. cf-xarray docs are available <a class="reference external" href="https://cf-xarray.readthedocs.io/en/latest/">here</a>.</p>
+</div>
+</div>
+</div>
 </div>
 
 <div class="section">
@@ -455,17 +582,24 @@ in a serial context.</p>
 
       </div>
     </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
 
-    
-  <script src="../_static/js/index.1e043a052b0af929e4d8.js"></script>
-
-
-    <footer class="footer mt-5 mt-md-0">
+  <footer class="footer mt-5 mt-md-0">
   <div class="container">
-    <p>
-          &copy; Copyright 2021, NCAR Earth System Data Science Team.<br/>
-        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.3.<br/>
-    </p>
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2021, NCAR Earth System Data Science Team.<br/>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.4.<br/>
+</p>
+    </div>
+    
   </div>
 </footer>
   </body>
