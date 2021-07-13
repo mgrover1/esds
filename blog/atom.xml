@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>ncar.github.io/esds/</id>
   <title>NCAR ESDS</title>
-  <updated>2021-07-02T15:04:42.009347+00:00</updated>
+  <updated>2021-07-13T19:22:03.259393+00:00</updated>
   <link href="ncar.github.io/esds/"/>
   <link href="ncar.github.io/esds/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.19">ABlog</generator>
@@ -644,5 +644,37 @@ What should I do?</summary>
     <category term="intake" label="intake"/>
     <category term="documentation" label="documentation"/>
     <published>2021-06-25T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>ncar.github.io/esds/posts/scaling-with-dask-class-takeaways/</id>
+    <title>Scaling Python with Dask Class Takeaways</title>
+    <updated>2021-07-02T00:00:00+00:00</updated>
+    <author>
+      <name>Max Grover</name>
+    </author>
+    <content type="html">&lt;p&gt;This week, I had the opportunity to attend the &lt;a class="reference external" href="https://coiled.io/scaling-python-with-dask/"&gt;Scaling Python with Dask&lt;/a&gt; class offered by &lt;a class="reference external" href="https://coiled.io/"&gt;Coiled&lt;/a&gt;. The class provided an overview of a variety of topics, including:&lt;/p&gt;
+&lt;p&gt;Parellelizing Python Code&lt;/p&gt;
+&lt;img alt="NCARCluster view" src="../_images/ncar_cluster.png" /&gt;
+</content>
+    <link href="ncar.github.io/esds/posts/scaling-with-dask-class-takeaways/" rel="alternate"/>
+    <summary>This week, I had the opportunity to attend the Scaling Python with Dask class offered by Coiled. The class provided an overview of a variety of topics, including:Parellelizing Python CodeNCARCluster view</summary>
+    <category term="dask" label="dask"/>
+    <category term="tutorial" label="tutorial"/>
+    <published>2021-07-02T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>ncar.github.io/esds/posts/dask-tutorial/</id>
+    <title>Dask Tutorial</title>
+    <updated>2021-07-08T00:00:00+00:00</updated>
+    <author>
+      <name>Julia Kent</name>
+    </author>
+    <content type="html">&lt;p&gt;The NCAR/UCAR virtual Python Tutorial Seminar Series continues with a 2-part introduction to the Python package &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;dask&lt;/span&gt;&lt;/code&gt; on &lt;strong&gt;Wednesday, July 14th&lt;/strong&gt; and &lt;strong&gt;August 11th at 1 PM Mountain Daylight Time&lt;/strong&gt;. These sessions will be led by Anderson Banihirwe.&lt;/p&gt;
+&lt;p&gt;The content for this tutorial is hosted on Anderson’s &lt;a class="reference external" href="https://github.com/andersy005/xarray-tutorial"&gt;Xarray Tutorial Github Repository&lt;/a&gt;. This is the same repository as the previous Xarray tutorials.&lt;/p&gt;
+</content>
+    <link href="ncar.github.io/esds/posts/dask-tutorial/" rel="alternate"/>
+    <summary>The NCAR/UCAR virtual Python Tutorial Seminar Series continues with a 2-part introduction to the Python package dask on Wednesday, July 14th and August 11th at 1 PM Mountain Daylight Time. These sessions will be led by Anderson Banihirwe.The content for this tutorial is hosted on Anderson’s Xarray Tutorial Github Repository. This is the same repository as the previous Xarray tutorials.</summary>
+    <category term="python-tutorial-series" label="python-tutorial-series"/>
+    <published>2021-07-08T00:00:00+00:00</published>
   </entry>
 </feed>
