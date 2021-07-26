@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>We are Xdev! &#8212; NCAR-ESDS 0.1 documentation</title>
+    <title>Dask Tutorial UPDATED DATES &#8212; NCAR-ESDS 0.1 documentation</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet" />
   <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -207,7 +207,7 @@ commentsRunWhenDOMLoaded(addUtterances);
             <div class="col-12 col-md-3 bd-sidebar">  
 <h2>
    <i class="fa fa-calendar"></i>
-  09 December 2019 
+  23 July 2021 
 </h2>
 
 <ul>
@@ -217,16 +217,18 @@ commentsRunWhenDOMLoaded(addUtterances);
     ><i class="fa-fw fa fa-user"></i></span
   >
    
-  <a href="../../blog/author/kevin-paul/">Kevin Paul</a>  
+  <a href="../../blog/author/julia-kent/">Julia Kent</a>  
 </li>
     
 <li id="tags">
   <span
-    ><i class="fa-fw fa fa-tags"></i> </span
+    ><i
+      class="fa-fw fa fa-tag"
+    ></i
+    ></span
   >
    
-  <a href="../../blog/tag/open-source/">open source</a>   
-  <a href="../../blog/tag/open-development/">open development</a>  
+  <a href="../../blog/tag/python-tutorial-series/">python-tutorial-series</a>  
 </li>
  
 </ul>
@@ -236,12 +238,6 @@ commentsRunWhenDOMLoaded(addUtterances);
 </h3>
 <ul>
    
-  <li>
-    <a href="../dask-tutorial-update/"
-      >23 July - Dask Tutorial UPDATED DATES</a
-    >
-  </li>
-  
   <li>
     <a href="../scipy-2021-takeaways/"
       >16 July - SciPy Conference 2021 Takeaways</a
@@ -263,6 +259,12 @@ commentsRunWhenDOMLoaded(addUtterances);
   <li>
     <a href="../model_documentation_jupyterbook/"
       >25 June - Creating Model Documentation Using Jupyterbook and Intake-esm</a
+    >
+  </li>
+  
+  <li>
+    <a href="../cesm-workshop-2021-diagnostics/"
+      >17 June - CESM Diagnostics Discussion</a
     >
   </li>
   
@@ -297,9 +299,24 @@ commentsRunWhenDOMLoaded(addUtterances);
               
               <div class="toc-item">
                 
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
 
 <nav id="bd-toc-nav">
-    
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#preparation">
+   Preparation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sign-up">
+   Sign Up
+  </a>
+ </li>
+</ul>
+
 </nav>
               </div>
               
@@ -318,64 +335,34 @@ commentsRunWhenDOMLoaded(addUtterances);
           <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
               
               <div>
-                 <div class="section" id="we-are-xdev">
-<h1>We are Xdev!<a class="headerlink" href="#we-are-xdev" title="Permalink to this headline">¶</a></h1>
-<p>More than a year ago, <a class="reference external" href="http://www.cgd.ucar.edu/staff/mclong/">Matthew Long</a> and
-<a class="reference external" href="https://staff.ucar.edu/users/kpaul">I</a> started shopping around the idea that a
-lot of what we do here at <a class="reference external" href="https://ncar.ucar.edu/">NCAR</a>, as well as <em>how</em> we do
-it, needed a bit of a facelift. Our pitch was simple: As an institution that
-supports the geoscientific community by providing valuable datasets, supercomputing
-facilities, and computer models, NCAR needs to <em>exemplify</em> modern best practices
-in the <em>development</em> and <em>use</em> of these resources. We took inspiration from the
-remarkably effective <a class="reference external" href="https://pangeo.io">Pangeo</a> community, which continues to show
-enormous success with Open Source development when coupled with modern software
-best practices, and we started to develop a plan of how to help shift, albeit
-slowly, both NCAR and—though collaboration with the Pangeo community—the
-geoscience community toward a better future.</p>
-<p>To implement our plan, Matt and I started to see how much benefit to NCAR it could
-be to have a small, Agile team that was dedicated to prototyping new technologies
-for the benefit of the rest of the organization and the rest of the geoscience
-community, as a whole, like the <a class="reference external" href="https://www.metoffice.gov.uk/">UK Met Office</a>’s
-<a class="reference external" href="https://www.informaticslab.co.uk/">Informatics Lab</a>. However, instead of just
-churning out technology, this group would also serve as an example to the rest of
-NCAR on how (and why) to use modern best practices (GitHub, continuous integration,
-test-driven development, etc.) for scientific software development. …and for
-science itself!</p>
-<p>Matt and I dreamed big, and as usually happens when the reality of budgets collides
-with dreams, we were forced to scale back our vision of a ten-person team to small
-group of two. Two is still greater than zero, so we considered that a success, and
-the Experimental Development Team (Xdev) was born! In October of 2018,
-<a class="reference external" href="https://andersonbanihirwe.dev/">Anderson Banihirwe</a> joined the team as a member of
-NCAR’s <a class="reference external" href="https://www2.cisl.ucar.edu/">Computational &amp; Informatics Laboratory (CISL)</a>,
-and in January of 2019, <a class="reference external" href="https://staff.ucar.edu/users/jkent">Julia Kent</a> (CISL)
-joined us, too. By the fall of 2019, we were able to bolster our ranks with
-part-time support from <a class="reference external" href="https://staff.ucar.edu/users/bonnland">Brian Bonnlander</a>
-(CISL), <a class="reference external" href="https://staff.ucar.edu/users/mlevy">Michael Levy</a> (CGD), and
-<a class="reference external" href="https://staff.ucar.edu/users/mabouali">Mohammad Abouali</a> (CISL). Read more about
-us <a class="reference external" href="https://ncar.github.io/xdev/pages/about/">here</a>.</p>
-<p>Currently, the Xdev Team is working to make <em>curiousity-driven analysis</em> of “big”
-scientific data a day-to-day reality. This is a tall order! Not only does the
-technology need to advance to make such a dream a reality, but helping users
-(<em>i.e.</em>, scientists) fully understand this new paradigm is extremely challenging.
-We appreciate that many scientists do not want to become developers themselves,
-which means that we must promote technology that is <em>expressive</em>, letting the user
-do more science with less engineering. This means <em>abstracting</em> away computational
-details, such as parallelism (<em>e.g.</em>, with <a class="reference external" href="https://dask.org">Dask</a>) or I/O (<em>e.g.</em>,
-with <a class="reference external" href="https://xarray.pydata.org/en/stable/">Xarray</a>) or complex scientific
-functions, without abstracting away so much that the user can no longer problem
-solve when things go wrong. We believe that means using the Python programming
-language. Python is designed for rapid prototyping, which is the nature of most
-scientific programming for analysis purposes.</p>
-<p>Achieving this goal also means <em>teaching</em> scientists about a new way of performing
-and <em>thinking about</em> data analysis. And this means not only teaching scientists
-how to use the technology (<em>e.g.</em>, giving tutorials, providing online examples,
-<em>etc.</em>), but also how the technology can improve science (<em>e.g.</em>, by making their
-workflows reproducible or replicable, by letting scientists ask questions they
-couldn’t with unscalable legacy tools, <em>etc.</em>).</p>
-<p>So, the Xdev Teams works with scientists to develop new technology, promotes
-existing technology, and teaches scientists how to use this technology for the
-greatest good. This is who we are, and we are just beginning to scratch the
-surface on a very big problem.</p>
+                 <div class="section" id="dask-tutorial-updated-dates">
+<h1>Dask Tutorial UPDATED DATES<a class="headerlink" href="#dask-tutorial-updated-dates" title="Permalink to this headline">¶</a></h1>
+<p>The NCAR/UCAR virtual Python Tutorial Seminar Series continues with a 2-part introduction to the Python package <code class="docutils literal notranslate"><span class="pre">dask</span></code> on <strong>Wednesday, July 28th</strong> and <strong>August 11th at 1 PM Mountain Daylight Time</strong>. These sessions will be led by Anderson Banihirwe.</p>
+<p><strong>Note:</strong> These dates have changed from the previous Dask Tutorial announcement.</p>
+<p>The content for this tutorial is hosted on Anderson’s <a class="reference external" href="https://github.com/andersy005/xarray-tutorial">Xarray Tutorial Github Repository</a>. This is the same repository as the previous Xarray tutorials.</p>
+<div class="section" id="preparation">
+<h2>Preparation<a class="headerlink" href="#preparation" title="Permalink to this headline">¶</a></h2>
+<p>If you did attend the Xarray tutorials (and have cloned this repository before):</p>
+<ul class="simple">
+<li><p>Stash their local changes with <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span> <span class="pre">.</span></code> and <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">stash</span></code></p></li>
+<li><p>Pull in upstream changes to the repository with <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span></code></p></li>
+<li><p>Update the conda environment with <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">env</span> <span class="pre">update</span> <span class="pre">-f</span> <span class="pre">binder/environment.yml</span></code></p></li>
+</ul>
+<p>If you did not attend the Xarray tutorials:</p>
+<ul class="simple">
+<li><p>Check your conda install if this is the first tutorial in the series you are joining us for with <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">--version</span></code> and if necessary <a class="reference external" href="https://docs.conda.io/en/latest/miniconda.html">install by following these instructions</a>.</p></li>
+<li><p>Navigate to Anderson’s <a class="reference external" href="https://github.com/andersy005/xarray-tutorial">Xarray Tutorial Github Repository</a>.</p></li>
+<li><p>Clone this repository by running <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/andersy005/xarray-tutorial</span></code></p></li>
+<li><p>Create a Conda environment from the <code class="docutils literal notranslate"><span class="pre">binder/environment.yml</span></code> file with the terminal by first moving into the <code class="docutils literal notranslate"><span class="pre">xarray-tutorial</span></code> directory with <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">xarray-tutorial</span></code> and then typing <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">env</span> <span class="pre">update</span> <span class="pre">--file</span> <span class="pre">binder/environment.yml</span></code></p></li>
+<li><p>Activate your environment in the terminal with <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span> <span class="pre">xarray-tutorial</span></code>.</p></li>
+<li><p>Test your installation by launching JupyterLab with <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">lab</span></code>.</p></li>
+</ul>
+</div>
+<div class="section" id="sign-up">
+<h2>Sign Up<a class="headerlink" href="#sign-up" title="Permalink to this headline">¶</a></h2>
+<p>If you would like join the <em>learnpython&#64;ucar.edu</em> Google group to be informed of updates and events in the seminar series, please do so by following this <a class="reference external" href="https://groups.google.com/a/ucar.edu/g/learnpython/about">link</a> and clicking “Join Group” next to the group name.</p>
+<iframe src="https://calendar.google.com/calendar/embed?src=c_krmtmqm6kb5u7ke6t5on9l0rus%40group.calendar.google.com" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+</div>
 </div>
 
 <div class="section">
@@ -383,20 +370,13 @@ surface on a very big problem.</p>
 <div class="section">
   <span style="float: left">
      
-    <a href="../Time/">
-      <i class="fa fa-arrow-circle-left"></i> The Significance of Time
+    <a href="../scipy-2021-takeaways/">
+      <i class="fa fa-arrow-circle-left"></i> SciPy Conference 2021 Takeaways
     </a>
     
   </span>
   <span>&nbsp;</span>
   <span style="float: right">
-     
-    <a href="../templating-isnt-just-for-web-developers/">
-      Templating isn’t just for Web Developers! <i
-        class="fa fa-arrow-circle-right"
-      ></i
-      >
-    </a>
     
   </span>
 </div>
