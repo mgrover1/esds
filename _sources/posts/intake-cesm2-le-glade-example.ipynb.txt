@@ -880,7 +880,7 @@
    "metadata": {},
    "source": [
     "### Query and Subset our Catalog\n",
-    "Let's go with `Lowest model level temperature` since this represents the closest to the surface without being at the **actuall** surface of the earth. We pass the `component` and `long_name` into the query, which reduces the number of datasets to 8!"
+    "Let's go with `Lowest model level temperature` since this represents the closest to the surface without being at the **actual** surface of the earth. We pass the `component` and `long_name` into the query, which reduces the number of datasets to 8!"
    ]
   },
   {
