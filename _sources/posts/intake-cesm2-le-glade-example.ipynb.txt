@@ -828,9 +828,7 @@
     "### Querying for our desired variable\n",
     "In this case, we are interested in the surface temperature in Boulder, Colorado. There are **numerous** temperature variables in the dataset, we can search for all the `long_names` from atmospheric output.\n",
     "\n",
-    "We setup a function to loop through and see which variables include 'temperature' in the `long_name`\n",
-    "\n",
-    "We can use the wildcard here `*` to look for where both captial and lowercase `temperature` show up"
+    "We can use the wildcard here `*` to look for where both captial and lowercase `temperature` show up in the `long_name`"
    ]
   },
   {
