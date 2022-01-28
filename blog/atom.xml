@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>ncar.github.io/esds/</id>
   <title>NCAR ESDS</title>
-  <updated>2022-01-28T14:46:12.997035+00:00</updated>
+  <updated>2022-01-28T14:52:02.833970+00:00</updated>
   <link href="ncar.github.io/esds/"/>
   <link href="ncar.github.io/esds/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.23">ABlog</generator>
@@ -1198,5 +1198,21 @@ What should I do?</summary>
     <category term="xarray" label="xarray"/>
     <category term="intake" label="intake"/>
     <published>2021-12-02T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>ncar.github.io/esds/posts/2022/ams-python-2022-takeaways/</id>
+    <title>Key Takeaways from the AMS 2022 Python Symposium</title>
+    <updated>2022-01-28T00:00:00+00:00</updated>
+    <author>
+      <name>Max Grover</name>
+    </author>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;/div&gt;
+</content>
+    <link href="ncar.github.io/esds/posts/2022/ams-python-2022-takeaways/" rel="alternate"/>
+    <category term="conference" label="conference"/>
+    <category term="python" label="python"/>
+    <category term="pythia" label="pythia"/>
+    <published>2022-01-28T00:00:00+00:00</published>
   </entry>
 </feed>
