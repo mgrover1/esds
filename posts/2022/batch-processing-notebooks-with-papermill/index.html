@@ -1,0 +1,871 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Batch Processing Jupyter Notebooks with Papermill &#8212; NCAR-ESDS 0.1 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../../../_static/styles/bootstrap.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94">
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "NCAR/esds");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'posts/2022/batch-processing-notebooks-with-papermill';</script>
+    <link rel="author" title="About these documents" href="../../../about/" />
+    <link rel="index" title="Index" href="../../../genindex/" />
+    <link rel="search" title="Search" href="../../../search/" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="docsearch:language" content="None"> 
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../../blog/atom.xml"
+  title="NCAR ESDS"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head>
+  
+  
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__primary" id="__primary">
+  <label class="overlay overlay-primary" for="__primary"></label>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__secondary" id="__secondary">
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+      
+<form class="bd-search d-flex align-items-center" action="../../../search/" method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this site... " aria-label="Search this site... " autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+    </div>
+  </div>
+
+  
+  <nav class="bd-header navbar navbar-expand-lg bd-navbar" id="navbar-main"><div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+      <span class="fa-solid fa-bars"></span>
+  </label>
+  <div id="navbar-start">
+    
+    
+  
+
+
+<a class="navbar-brand logo" href="../../../">
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <p class="title logo__title">NCAR-ESDS 0.1 documentation</p>
+  
+</a>
+    
+  </div>
+
+  
+  <div class="col-lg-9 navbar-header-items">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../about/">
+                        About Us
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../faq/">
+                        Frequently Asked Questions
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../blog/">
+                        Blog
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../communication/">
+                        Communication
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../office-hours/">
+                        Office Hours
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../best-practices/">
+                        Best Practices
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../calendar/">
+                        Calendar
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../projects/">
+                        Projects
+                      </a>
+                    </li>
+                
+                </div>
+            </div>
+            
+    </ul>
+</nav>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+        <div class="navbar-end-item navbar-persistent--container">
+          
+<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-toggle="tooltip">
+  <i class="fa-solid fa-magnifying-glass"></i>
+</button>
+        </div>
+      
+      
+      <div class="navbar-end-item">
+        
+<form class="bd-search d-flex align-items-center" action="../../../search/" method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this site... " aria-label="Search this site... " autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/ncar/esds" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+
+
+  
+  
+    <div class="navbar-persistent--mobile">
+<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-toggle="tooltip">
+  <i class="fa-solid fa-magnifying-glass"></i>
+</button>
+    </div>
+  
+
+  
+  <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+  </label>
+  
+
+</div>
+  </nav>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../about/">
+                        About Us
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../faq/">
+                        Frequently Asked Questions
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../blog/">
+                        Blog
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../communication/">
+                        Communication
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../office-hours/">
+                        Office Hours
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../best-practices/">
+                        Best Practices
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../calendar/">
+                        Calendar
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../projects/">
+                        Projects
+                      </a>
+                    </li>
+                
+                </div>
+            </div>
+            
+    </ul>
+</nav>
+      </div>
+      
+      </div>
+    
+
+    
+    
+    <div class="sidebar-header-items__end">
+      
+      <div class="navbar-end-item">
+        
+<form class="bd-search d-flex align-items-center" action="../../../search/" method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this site... " aria-label="Search this site... " autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/ncar/esds" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+    
+  </div>
+
+  
+  <div class="sidebar-start-items sidebar-primary__section">
+    <div class="sidebar-start-items__item">
+<form class="bd-search d-flex align-items-center" action="../../../search/" method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this site... " aria-label="Search this site... " autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+    </div>
+    <div class="sidebar-start-items__item">  
+<h2>
+   <i class="fa fa-calendar"></i>
+  17 March 2022 
+</h2>
+
+<ul>
+   
+<li id="author">
+  <span><i class="fa-fw fa fa-user"></i></span
+  >
+   
+  <a href="../../../blog/author/anderson-banihirwe/">Anderson Banihirwe</a>,   
+  <a href="../../../blog/author/matthew-long/">Matthew Long</a>  
+</li>
+    
+<li id="tags">
+  <span><i class="fa-fw fa fa-tags"></i> </span
+  >
+   
+  <a href="../../../blog/tag/notebooks/">notebooks</a>   
+  <a href="../../../blog/tag/jupyter/">jupyter</a>   
+  <a href="../../../blog/tag/automation/">automation</a>   
+  <a href="../../../blog/tag/python/">python</a>   
+  <a href="../../../blog/tag/papermill/">papermill</a>  
+</li>
+ 
+</ul>
+
+    </div>
+    <div class="sidebar-start-items__item">
+<h3>
+  <a href="../../../blog/">Recent Posts</a>
+</h3>
+<ul>
+   
+  <li>
+    <a href="../esds-event-recap/"
+      >19 December - Recap of a (Re)Introduction to Earth System Data Science (ESDS) Across NCAR/UCAR/UCP</a
+    >
+  </li>
+  
+  <li>
+    <a href="../cam-se-regridding/"
+      >06 December - Regridding using xESMF and an existing weights file</a
+    >
+  </li>
+  
+  <li>
+    <a href="../xarray-groupby-vs-geocat-climatology/"
+      >29 November - Calculating Temporal Averages with GeoCAT-comp vs Xarray</a
+    >
+  </li>
+  
+  <li>
+    <a href="../esds-event-prep/"
+      >02 November - Preparation for a (Re)Introduction to Earth System Data Science (ESDS) Across NCAR/UCAR/UCP</a
+    >
+  </li>
+  
+  <li>
+    <a href="../esds-fall-event/"
+      >18 October - A (Re)Introduction to Earth System Data Science (ESDS) Across NCAR/UCAR/UCP</a
+    >
+  </li>
+  
+</ul>
+
+    </div>
+    <div class="sidebar-start-items__item">
+<h3>
+  <a href="../../../blog/archive/">Archives</a>
+</h3>
+<ul>
+   
+  <li>
+    <a href="../../../blog/2022/">2022 (13)</a>
+  </li>
+    
+  <li>
+    <a href="../../../blog/2021/">2021 (52)</a>
+  </li>
+    
+  <li>
+    <a href="../../../blog/2020/">2020 (6)</a>
+  </li>
+    
+  <li>
+    <a href="../../../blog/2019/">2019 (2)</a>
+  </li>
+   
+</ul>
+
+    </div>
+  </div>
+  
+
+  
+  <div class="sidebar-end-items sidebar-primary__section">
+    <div class="sidebar-end-items__item">
+    </div>
+  </div>
+
+  
+  <div id="rtd-footer-container"></div>
+
+      </div>
+      <main id="main-content" class="bd-main">
+        
+        
+        <div class="bd-content">
+          <div class="bd-article-container">
+            
+            <div class="bd-header-article">
+                
+            </div>
+            
+            
+            <article class="bd-article" role="main">
+               <section class="tex2jax_ignore mathjax_ignore" id="batch-processing-jupyter-notebooks-with-papermill">
+<h1>Batch Processing Jupyter Notebooks with Papermill<a class="headerlink" href="#batch-processing-jupyter-notebooks-with-papermill" title="Permalink to this headline">#</a></h1>
+<section id="background-and-motivation">
+<h2>Background and Motivation<a class="headerlink" href="#background-and-motivation" title="Permalink to this headline">#</a></h2>
+<p><a class="reference external" href="https://jupyter.org/">Jupyter notebooks</a> are really good for doing the heavy lifting of data analysis by:</p>
+<ul class="simple">
+<li><p>Allowing you to showcase your work in a single place. You can see the complete “paper trail” of what was done. This includes the code, results, visuals and the narrative accompanying your analysis.</p></li>
+<li><p>Allowing others to easily use your work as a starting point for their own analysis. A new user can run cell by cell through the notebook to better get an understanding of the code.</p></li>
+</ul>
+<p>However, Jupyter notebooks have a few drawbacks:</p>
+<ul class="simple">
+<li><p>Jupyter notebooks are difficult to maintain and reuse. Unlike a regular Python module that you can import and use in any Python project, users are copying and pasting snippets from each other’s notebooks, and it’s very easy to get out of sync.</p></li>
+<li><p>Jupyter notebooks are hard to parameterize. This makes it difficult to maintain one version of the truth that can be used as a notebook template for exploring different parameters. Parameters in this context correspond to different variables/arguments that you want to feed to your notebook whenever you run it.</p></li>
+<li><p>Unlike a regular Python scripts that can be run from the command line, running a Jupyter notebook in batch mode requires additional setup and configuration.</p></li>
+</ul>
+<p>Some of these drawbacks can be addressed with the help of Papermill.</p>
+</section>
+<section id="what-is-papermill">
+<h2>What is Papermill?<a class="headerlink" href="#what-is-papermill" title="Permalink to this headline">#</a></h2>
+<p><a class="reference external" href="https://papermill.readthedocs.io/en/latest/"><strong>Papermill</strong></a> is a Python library that aims to allow users to run and parametrize Jupyter notebooks in a way that is easy to maintain and reuse. In this post, we will walk through how to use Papermill’s approach to parametrize a notebook that loads an Xarray dataset and plots a map of the data.</p>
+</section>
+<section id="how-to-use-papermill">
+<h2>How to use Papermill<a class="headerlink" href="#how-to-use-papermill" title="Permalink to this headline">#</a></h2>
+<section id="step-1-prepare-the-notebook">
+<h3>Step 1: Prepare the notebook<a class="headerlink" href="#step-1-prepare-the-notebook" title="Permalink to this headline">#</a></h3>
+<p>To transform your notebook into a Papermill-enabled notebook (a notebook that can be run with Papermill), you need to add the <code class="docutils literal notranslate"><span class="pre">parameters</span></code> tag to cells that contains the parameters you intend to parametrize when running the notebook with Papermill:</p>
+<ol class="arabic simple">
+<li><p>Select the cell to parameterize</p></li>
+<li><p>Click the property inspector in the right sidebar (double gear icon)</p></li>
+<li><p>Type <code class="docutils literal notranslate"><span class="pre">parameters</span></code> in the <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">Tag</span> <span class="pre">+</span></code> box and hit <code class="docutils literal notranslate"><span class="pre">Enter</span></code>.</p></li>
+</ol>
+<p><img alt="" src="../../../_images/papermill-parameters.png" /></p>
+</section>
+<section id="step-2-prepare-the-execution-environment">
+<h3>Step 2: Prepare the execution environment<a class="headerlink" href="#step-2-prepare-the-execution-environment" title="Permalink to this headline">#</a></h3>
+<p>Once you are ready to run your notebook with Papermill, you need to prepare the execution environment by ensuring the following packages are installed in the enviroment from which you plan to invoke Papermill:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://papermill.readthedocs.io/en/latest/"><strong>papermill</strong></a></p></li>
+<li><p><a class="reference external" href="https://jupyterlab.readthedocs.io/en/stable/"><strong>jupyterlab</strong></a></p></li>
+</ul>
+<p>For demonstration purposes, we will use <code class="docutils literal notranslate"><span class="pre">mamba</span></code>/<code class="docutils literal notranslate"><span class="pre">conda</span></code> to install these packages in a new execution environment:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>mamba<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>myenv<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>papermill<span class="w"> </span>ipykernel
+<span class="c1"># or</span>
+$<span class="w"> </span>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>myenv<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>papermill<span class="w"> </span>ipykernel
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>There are no restrictions on the environment in which you can run Papermill. You can use any environment that you like (e.g. the same environment used by your notebook).</p>
+</div>
+<p>Once your environment is ready, you need to ensure the Jupyter kernel used by your notebook is properly configured by running the following commands:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>conda<span class="w"> </span>activate<span class="w"> </span>my-analysis-env
+$<span class="w"> </span>python3<span class="w"> </span>-m<span class="w"> </span>ipykernel<span class="w"> </span>install<span class="w"> </span>--user<span class="w"> </span>--name<span class="w"> </span>my-analyis-env
+</pre></div>
+</div>
+</section>
+<section id="step-3-running-the-notebook">
+<h3>Step 3: Running the notebook<a class="headerlink" href="#step-3-running-the-notebook" title="Permalink to this headline">#</a></h3>
+<p>Now that you have the environment ready and the notebook is parametrized, you can run the notebook. There are two ways to run the notebook:</p>
+<section id="option-1-from-the-command-line">
+<h4>Option 1: from the command line<a class="headerlink" href="#option-1-from-the-command-line" title="Permalink to this headline">#</a></h4>
+<p>To run the notebook from the command line, you need to run the following command</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>conda<span class="w"> </span>activate<span class="w"> </span>myenv
+$<span class="w"> </span>papermill<span class="w"> </span>sample-notebook.ipynb<span class="w"> </span>output-notebook.ipynb<span class="w"> </span>-p<span class="w"> </span>dataset<span class="w"> </span>air_temperature<span class="w"> </span>-p<span class="w"> </span>variable<span class="w"> </span>air<span class="w"> </span>-k<span class="w"> </span>my-analysis-env
+</pre></div>
+</div>
+<p>which returns the following output:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Input<span class="w"> </span>Notebook:<span class="w">  </span>sample-notebook.ipynb
+Output<span class="w"> </span>Notebook:<span class="w"> </span>output-notebook.ipynb
+Executing:<span class="w">   </span><span class="m">0</span>%<span class="p">|</span><span class="w">                                                                                                                                   </span><span class="p">|</span><span class="w"> </span><span class="m">0</span>/6<span class="w"> </span><span class="o">[</span><span class="m">00</span>:00&lt;?,<span class="w"> </span>?cell/s<span class="o">]</span>Executing<span class="w"> </span>notebook<span class="w"> </span>with<span class="w"> </span>kernel:<span class="w"> </span>my-analysis-env
+Executing:<span class="w"> </span><span class="m">100</span>%<span class="p">|</span>███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████<span class="p">|</span><span class="w"> </span><span class="m">6</span>/6<span class="w"> </span><span class="o">[</span><span class="m">00</span>:05&lt;<span class="m">00</span>:00,<span class="w">  </span><span class="m">1</span>.05cell/s<span class="o">]</span>
+</pre></div>
+</div>
+<p>When inspecting the output notebook, you will notice that Papermill has added a cell that contains the parameters that were used to run the notebook (e.g. <code class="docutils literal notranslate"><span class="pre">air_temperature</span></code> and <code class="docutils literal notranslate"><span class="pre">air</span></code>). Attached is a screenshot of the original notebook and the output notebook side by side.</p>
+<p><img alt="" src="../../../_images/papermill-executed-notebook.png" /></p>
+</section>
+<section id="option-2-from-another-python-script-or-jupyter-notebook">
+<h4>Option 2: from another Python script or Jupyter notebook<a class="headerlink" href="#option-2-from-another-python-script-or-jupyter-notebook" title="Permalink to this headline">#</a></h4>
+<p>To run the notebook from another Python script or Jupyter notebook, you need to use the <code class="docutils literal notranslate"><span class="pre">papermill.execute_notebook</span></code> function.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># contents of `papermill_runner.py`</span>
+<span class="kn">import</span> <span class="nn">papermill</span> <span class="k">as</span> <span class="nn">pm</span>
+
+<span class="n">parameters</span> <span class="o">=</span> <span class="p">[{</span>
+    <span class="s2">&quot;dataset&quot;</span><span class="p">:</span> <span class="s2">&quot;air_temperature&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;variable&quot;</span><span class="p">:</span> <span class="s2">&quot;air&quot;</span>
+<span class="p">},</span> <span class="p">{</span>
+    <span class="s2">&quot;dataset&quot;</span><span class="p">:</span> <span class="s2">&quot;rasm&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;variable&quot;</span><span class="p">:</span> <span class="s2">&quot;Tair&quot;</span>
+<span class="p">}]</span>
+
+<span class="k">for</span> <span class="n">params</span> <span class="ow">in</span> <span class="n">parameters</span><span class="p">:</span>
+    <span class="n">pm</span><span class="o">.</span><span class="n">execute_notebook</span><span class="p">(</span>
+        <span class="s2">&quot;sample-notebook.ipynb&quot;</span><span class="p">,</span>
+        <span class="sa">f</span><span class="s2">&quot;output-notebook-</span><span class="si">{</span><span class="n">params</span><span class="p">[</span><span class="s1">&#39;dataset&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">params</span><span class="p">[</span><span class="s1">&#39;variable&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">.ipynb&quot;</span><span class="p">,</span>
+        <span class="n">kernel_name</span><span class="o">=</span><span class="s2">&quot;my-analysis-env&quot;</span><span class="p">,</span>
+        <span class="n">parameters</span><span class="o">=</span><span class="n">params</span>
+    <span class="p">)</span>
+</pre></div>
+</div>
+<p>Running the example above, produces two notebooks which are saved using the pair of parameters used in the notebook.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>python<span class="w"> </span>papermill_runner.py
+Executing:<span class="w">   </span><span class="m">0</span>%<span class="p">|</span><span class="w">                                                                                                                                   </span><span class="p">|</span><span class="w"> </span><span class="m">0</span>/6<span class="w"> </span><span class="o">[</span><span class="m">00</span>:00&lt;?,<span class="w"> </span>?cell/s<span class="o">]</span><span class="nv">CONDA_PREFIX</span><span class="o">=</span>/glade/work/abanihi/opt/miniconda/envs/my-analysis-env
+Executing:<span class="w"> </span><span class="m">100</span>%<span class="p">|</span>███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████<span class="p">|</span><span class="w"> </span><span class="m">6</span>/6<span class="w"> </span><span class="o">[</span><span class="m">00</span>:06&lt;<span class="m">00</span>:00,<span class="w">  </span><span class="m">1</span>.06s/cell<span class="o">]</span>
+Executing:<span class="w">   </span><span class="m">0</span>%<span class="p">|</span><span class="w">                                                                                                                                   </span><span class="p">|</span><span class="w"> </span><span class="m">0</span>/6<span class="w"> </span><span class="o">[</span><span class="m">00</span>:00&lt;?,<span class="w"> </span>?cell/s<span class="o">]</span><span class="nv">CONDA_PREFIX</span><span class="o">=</span>/glade/work/abanihi/opt/miniconda/envs/my-analysis-env
+Executing:<span class="w"> </span><span class="m">100</span>%<span class="p">|</span>███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████<span class="p">|</span><span class="w"> </span><span class="m">6</span>/6<span class="w"> </span><span class="o">[</span><span class="m">00</span>:03&lt;<span class="m">00</span>:00,<span class="w">  </span><span class="m">1</span>.69cell/s<span class="o">]</span>
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>ls<span class="w"> </span>-ltrh
+-rw-r--r--<span class="w">  </span><span class="m">1</span><span class="w"> </span>abanihi<span class="w"> </span>ncar<span class="w"> </span>102K<span class="w"> </span>Mar<span class="w"> </span><span class="m">14</span><span class="w"> </span><span class="m">14</span>:26<span class="w"> </span>sample-notebook.ipynb
+-rw-r--r--<span class="w">  </span><span class="m">1</span><span class="w"> </span>abanihi<span class="w"> </span>ncar<span class="w">  </span>50K<span class="w"> </span>Mar<span class="w"> </span><span class="m">14</span><span class="w"> </span><span class="m">15</span>:26<span class="w"> </span>output-notebook.ipynb
+-rw-r--r--<span class="w">  </span><span class="m">1</span><span class="w"> </span>abanihi<span class="w"> </span>ncar<span class="w">  </span><span class="m">342</span><span class="w"> </span>Mar<span class="w"> </span><span class="m">14</span><span class="w"> </span><span class="m">15</span>:34<span class="w"> </span>papermill_runner.py
+-rw-r--r--<span class="w">  </span><span class="m">1</span><span class="w"> </span>abanihi<span class="w"> </span>ncar<span class="w">  </span>50K<span class="w"> </span>Mar<span class="w"> </span><span class="m">14</span><span class="w"> </span><span class="m">15</span>:34<span class="w"> </span>output-notebook-air_temperature-air.ipynb
+-rw-r--r--<span class="w">  </span><span class="m">1</span><span class="w"> </span>abanihi<span class="w"> </span>ncar<span class="w"> </span>105K<span class="w"> </span>Mar<span class="w"> </span><span class="m">14</span><span class="w"> </span><span class="m">15</span>:34<span class="w"> </span>output-notebook-rasm-Tair.ipynb
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For more information on Papermill, see <a class="reference external" href="https://papermill.readthedocs.io/en/latest/">the documentation</a>.</p>
+</div>
+</section>
+</section>
+</section>
+<section id="final-thoughts">
+<h2>Final Thoughts<a class="headerlink" href="#final-thoughts" title="Permalink to this headline">#</a></h2>
+<p>Papermill is well-suited for</p>
+<ul class="simple">
+<li><p>Users who would like to run a notebook template with different input values (parameters).</p></li>
+<li><p>Serial execution on a single node (i.e. notebooks are executed one after the other). However, you can use frameworks like Dask to parallelize the execution of code within the notebook. Features like executing the same notebook with different parameters in parallel/concurrently would require extending Papermill.</p></li>
+</ul>
+</section>
+</section>
+
+<div class="section">
+    
+
+<div class="section">
+  <span style="float: left">
+     
+    <a href="../Thinking-with-Xarray/">
+      <i class="fa fa-arrow-circle-left"></i> “Thinking with Xarray” Tutorial
+    </a>
+    
+  </span>
+  <span>&nbsp;</span>
+  <span style="float: right">
+     
+    <a href="../dask-debug-detrend/">
+      Debugging dask workflows: Detrending <i
+        class="fa fa-arrow-circle-right"
+      ></i
+      >
+    </a>
+    
+  </span>
+</div>
+  
+</div>
+
+            </article>
+            
+            
+            
+            <footer class="bd-footer-article">
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+            
+          </div>
+          
+          
+          
+            <div class="bd-sidebar-secondary bd-toc">
+              
+<div class="toc-item">
+  
+<div class="tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+</div>
+<nav id="bd-toc-nav" class="page-toc">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#background-and-motivation">
+   Background and Motivation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-is-papermill">
+   What is Papermill?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-to-use-papermill">
+   How to use Papermill
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-1-prepare-the-notebook">
+     Step 1: Prepare the notebook
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-2-prepare-the-execution-environment">
+     Step 2: Prepare the execution environment
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-3-running-the-notebook">
+     Step 3: Running the notebook
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#option-1-from-the-command-line">
+       Option 1: from the command line
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#option-2-from-another-python-script-or-jupyter-notebook">
+       Option 2: from another Python script or Jupyter notebook
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#final-thoughts">
+   Final Thoughts
+  </a>
+ </li>
+</ul>
+
+</nav>
+</div>
+
+<div class="toc-item">
+  
+<div id="searchbox"></div>
+</div>
+
+<div class="toc-item">
+  
+</div>
+
+<div class="toc-item">
+  
+<div class="tocsection sourcelink">
+    <a href="../../../_sources/posts/2022/batch-processing-notebooks-with-papermill.md.txt">
+        <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+</div>
+
+</div>
+
+            </div>
+          
+          
+        </div>
+        <footer class="bd-footer-content">
+          <div class="bd-footer-content__inner">
+            
+          </div>
+        </footer>
+        
+      </main>
+    </div>
+  </div>
+
+  
+    
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94"></script>
+
+  <footer class="bd-footer"><div class="bd-footer__inner container">
+  
+  <div class="footer-item">
+    
+<p class="copyright">
+
+    &copy; Copyright 2021, NCAR Earth System Data Science Team.<br>
+
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="theme-version">
+    Built with the
+    <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">
+        PyData Sphinx Theme
+    </a>
+    0.12.0.
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+<p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
+</p>
+
+  </div>
+  
+</div>
+  </footer>
+  </body>
+</html>

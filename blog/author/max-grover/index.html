@@ -6,37 +6,41 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Posts by Max Grover &#8212; NCAR-ESDS 0.1 documentation</title>
-    
-    <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
   
-    
-    <link rel="stylesheet"
-      href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
   
-    
-      
   
-    
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../../../_static/styles/bootstrap.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/pydata-sphinx-theme.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    
-    <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94">
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94">
+
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
     <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
     <script kind="utterances">
 
     var commentsRunWhenDOMLoaded = cb => {
@@ -71,26 +75,13 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'blog/author/max-grover';</script>
     <link rel="author" title="About these documents" href="../../../about/" />
     <link rel="index" title="Index" href="../../../genindex/" />
     <link rel="search" title="Search" href="../../../search/" /> 
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
-<script async="" src="https://www.google-analytics.com/analytics.js"></script>
-<script>
-                        window.ga = window.ga || function () {
-                            (ga.q = ga.q || []).push(arguments) };
-                        ga.l = +new Date;
-                        ga('create', 'UA-196809533-1', 'auto');
-                        ga('set', 'anonymizeIp', true);
-                        ga('send', 'pageview');
-                    </script>
- 
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="docsearch:language" content="None"> 
 <link
   rel="alternate"
   type="application/atom+xml"
@@ -124,94 +115,174 @@ commentsRunWhenDOMLoaded(addUtterances);
 </style>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
 
-    
-    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
+  
+  <input type="checkbox" class="sidebar-toggle" name="__primary" id="__primary">
+  <label class="overlay overlay-primary" for="__primary"></label>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__secondary" id="__secondary">
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+      
+<form class="bd-search d-flex align-items-center" action="../../../search/" method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this site... " aria-label="Search this site... " autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+    </div>
+  </div>
+
+  
+  <nav class="bd-header navbar navbar-expand-lg bd-navbar" id="navbar-main"><div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+      <span class="fa-solid fa-bars"></span>
+  </label>
   <div id="navbar-start">
     
     
-<a class="navbar-brand" href="../../../">
-<p class="title">NCAR-ESDS</p>
-</a>
+  
 
+
+<a class="navbar-brand logo" href="../../../">
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <p class="title logo__title">NCAR-ESDS 0.1 documentation</p>
+  
+</a>
     
   </div>
 
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
   
-  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+  <div class="col-lg-9 navbar-header-items">
     <div id="navbar-center" class="mr-auto">
       
       <div class="navbar-center-item">
-        <ul id="navbar-main-elements" class="navbar-nav">
-    <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../../about/">
-  About Us
- </a>
-</li>
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../about/">
+                        About Us
+                      </a>
+                    </li>
+                
 
-<li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../../faq/">
-  Frequently Asked Questions
- </a>
-</li>
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../faq/">
+                        Frequently Asked Questions
+                      </a>
+                    </li>
+                
 
-<li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../">
-  Blog
- </a>
-</li>
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../">
+                        Blog
+                      </a>
+                    </li>
+                
 
-<li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../../communication/">
-  Communication
- </a>
-</li>
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../communication/">
+                        Communication
+                      </a>
+                    </li>
+                
 
-<li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../../best-practices/">
-  Best Practices
- </a>
-</li>
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../office-hours/">
+                        Office Hours
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../best-practices/">
+                        Best Practices
+                      </a>
+                    </li>
+                
 
-<li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../../calendar/">
-  Calendar
- </a>
-</li>
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../calendar/">
+                        Calendar
+                      </a>
+                    </li>
+                
 
-<li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../../projects/">
-  Projects
- </a>
-</li>
-
-    
-</ul>
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../projects/">
+                        Projects
+                      </a>
+                    </li>
+                
+                </div>
+            </div>
+            
+    </ul>
+</nav>
       </div>
       
     </div>
 
     <div id="navbar-end">
       
+        <div class="navbar-end-item navbar-persistent--container">
+          
+<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-toggle="tooltip">
+  <i class="fa-solid fa-magnifying-glass"></i>
+</button>
+        </div>
+      
+      
       <div class="navbar-end-item">
-        <form class="bd-search d-flex align-items-center" action="../../../search/" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this site... " aria-label="Search this site... " autocomplete="off" >
+        
+<form class="bd-search d-flex align-items-center" action="../../../search/" method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this site... " aria-label="Search this site... " autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form>
       </div>
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/ncar/esds" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/ncar/esds" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa-brands fa-square-github"></i></span>
             <label class="sr-only">GitHub</label></a>
         </li>
       </ul>
@@ -219,45 +290,174 @@ commentsRunWhenDOMLoaded(addUtterances);
       
     </div>
   </div>
-</div>
-    </nav>
-    
 
-    <div class="container-xl">
-      <div class="row">
-          
-            
-            <!-- Only show if we have sidebars configured, else just a small margin  -->
-            <div class="col-12 col-md-3 bd-sidebar">
-              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../../../search/" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this site... " aria-label="Search this site... " autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-  <div class="bd-toc-item active">
+
+  
+  
+    <div class="navbar-persistent--mobile">
+<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-toggle="tooltip">
+  <i class="fa-solid fa-magnifying-glass"></i>
+</button>
+    </div>
+  
+
+  
+  <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+  </label>
+  
+
+</div>
+  </nav>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+  
+  <div class="sidebar-header-items sidebar-primary__section">
     
-  </div>
-</nav>
-              </div>
-              <div class="sidebar-end-items">
-              </div>
+    
+      <div class="sidebar-header-items__center">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../about/">
+                        About Us
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../faq/">
+                        Frequently Asked Questions
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../">
+                        Blog
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../communication/">
+                        Communication
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../office-hours/">
+                        Office Hours
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../best-practices/">
+                        Best Practices
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../calendar/">
+                        Calendar
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../projects/">
+                        Projects
+                      </a>
+                    </li>
+                
+                </div>
             </div>
             
-          
+    </ul>
+</nav>
+      </div>
+      
+      </div>
+    
 
+    
+    
+    <div class="sidebar-header-items__end">
+      
+      <div class="navbar-end-item">
+        
+<form class="bd-search d-flex align-items-center" action="../../../search/" method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this site... " aria-label="Search this site... " autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
           
-          <div class="d-none d-xl-block col-xl-2 bd-toc">
-            
-          </div>
           
+          
+          
+          
+          
+          
+          <a href="https://github.com/ncar/esds" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+    
+  </div>
 
-          
-          
+  
+
+  
+  <div class="sidebar-end-items sidebar-primary__section">
+    <div class="sidebar-end-items__item">
+    </div>
+  </div>
+
+  
+  <div id="rtd-footer-container"></div>
+
+      </div>
+      <main id="main-content" class="bd-main">
+        
+        
+        <div class="bd-content">
+          <div class="bd-article-container">
             
-          
-          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
-              
-              <div>
+            <div class="bd-header-article">
                 
+            </div>
+            
+            
+            <article class="bd-article" role="main">
+              
+
 <div class="section">
   <h1>
      Posts by  Max Grover 
@@ -266,48 +466,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 
   <div class="section ablog-post">
     <h2 class="ablog-post-title">
-      <a href="../../../posts/2022/ams-python-2022-takeaways/"
-        >Key Takeaways from the AMS 2022 Python Symposium</a
-      >
-    </h2>
-
-    <ul class="ablog-archive">
-      <li>
-         <i class="fa fa-calendar"></i> 28 January 2022 
-      </li>
-       
-<li id="author">
-  <span
-    ><i class="fa-fw fa fa-user"></i></span
-  >
-   
-  <a href="#">Max Grover</a>  
-</li>
-    
-<li id="tags">
-  <span
-    ><i class="fa-fw fa fa-tags"></i> </span
-  >
-   
-  <a href="../../tag/conference/">conference</a>   
-  <a href="../../tag/python/">python</a>   
-  <a href="../../tag/pythia/">pythia</a>  
-</li>
- 
-    </ul>
-    <div class="ablog-post-excerpt docutils container">
-</div>
-
-    <p class="ablog-post-expand"><a href="../../../posts/2022/ams-python-2022-takeaways/"><em>Read more ...</em></a></p>
-    <hr />
-  </div>
-  
-
-  <div class="section ablog-post">
-    <h2 class="ablog-post-title">
-      <a href="../../../posts/2021/intake-esm-tutorial-2021/"
-        >Intake-ESM Tutorial</a
-      >
+      <a href="../../../posts/2021/intake-esm-tutorial-2021/">Intake-ESM Tutorial</a>
     </h2>
 
     <ul class="ablog-archive">
@@ -316,21 +475,19 @@ commentsRunWhenDOMLoaded(addUtterances);
       </li>
        
 <li id="author">
-  <span
-    ><i class="fa-fw fa fa-user"></i></span
+  <span><i class="fa-fw fa fa-user"></i></span
   >
    
   <a href="#">Max Grover</a>  
 </li>
     
 <li id="tags">
-  <span
-    ><i class="fa-fw fa fa-tags"></i> </span
+  <span><i class="fa-fw fa fa-tags"></i> </span
   >
    
-  <a href="../../tag/python-tutorial-series/">python-tutorial-series</a>   
   <a href="../../tag/xarray/">xarray</a>   
-  <a href="../../tag/intake/">intake</a>  
+  <a href="../../tag/intake/">intake</a>   
+  <a href="../../tag/python-tutorial-series/">python-tutorial-series</a>  
 </li>
  
     </ul>
@@ -340,15 +497,13 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 
     <p class="ablog-post-expand"><a href="../../../posts/2021/intake-esm-tutorial-2021/"><em>Read more ...</em></a></p>
-    <hr />
+    <hr/>
   </div>
   
 
   <div class="section ablog-post">
     <h2 class="ablog-post-title">
-      <a href="../../../posts/2021/esds-update-november-2021/"
-        >ESDS Update November 2021</a
-      >
+      <a href="../../../posts/2021/esds-update-november-2021/">ESDS Update November 2021</a>
     </h2>
 
     <ul class="ablog-archive">
@@ -357,23 +512,21 @@ commentsRunWhenDOMLoaded(addUtterances);
       </li>
        
 <li id="author">
-  <span
-    ><i class="fa-fw fa fa-user"></i></span
+  <span><i class="fa-fw fa fa-user"></i></span
   >
    
   <a href="#">Max Grover</a>  
 </li>
     
 <li id="tags">
-  <span
-    ><i class="fa-fw fa fa-tags"></i> </span
+  <span><i class="fa-fw fa fa-tags"></i> </span
   >
    
-  <a href="../../tag/update/">update</a>   
-  <a href="../../tag/faq/">faq</a>   
-  <a href="../../tag/xarray/">xarray</a>   
   <a href="../../tag/dask/">dask</a>   
-  <a href="../../tag/matplotlib/">matplotlib</a>  
+  <a href="../../tag/matplotlib/">matplotlib</a>   
+  <a href="../../tag/xarray/">xarray</a>   
+  <a href="../../tag/update/">update</a>   
+  <a href="../../tag/faq/">faq</a>  
 </li>
  
     </ul>
@@ -384,15 +537,13 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 
     <p class="ablog-post-expand"><a href="../../../posts/2021/esds-update-november-2021/"><em>Read more ...</em></a></p>
-    <hr />
+    <hr/>
   </div>
   
 
   <div class="section ablog-post">
     <h2 class="ablog-post-title">
-      <a href="../../../posts/2021/yearly-averages-xarray/"
-        >Correctly Calculating Annual Averages with Xarray</a
-      >
+      <a href="../../../posts/2021/yearly-averages-xarray/">Correctly Calculating Annual Averages with Xarray</a>
     </h2>
 
     <ul class="ablog-archive">
@@ -401,22 +552,20 @@ commentsRunWhenDOMLoaded(addUtterances);
       </li>
        
 <li id="author">
-  <span
-    ><i class="fa-fw fa fa-user"></i></span
+  <span><i class="fa-fw fa fa-user"></i></span
   >
    
   <a href="#">Max Grover</a>  
 </li>
     
 <li id="tags">
-  <span
-    ><i class="fa-fw fa fa-tags"></i> </span
+  <span><i class="fa-fw fa fa-tags"></i> </span
   >
    
+  <a href="../../tag/cesm2-le/">cesm2-le</a>   
   <a href="../../tag/cesm/">cesm</a>   
-  <a href="../../tag/diagnostics/">diagnostics</a>   
   <a href="../../tag/xarray/">xarray</a>   
-  <a href="../../tag/cesm2-le/">cesm2-le</a>  
+  <a href="../../tag/diagnostics/">diagnostics</a>  
 </li>
  
     </ul>
@@ -427,15 +576,13 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 
     <p class="ablog-post-expand"><a href="../../../posts/2021/yearly-averages-xarray/"><em>Read more ...</em></a></p>
-    <hr />
+    <hr/>
   </div>
   
 
   <div class="section ablog-post">
     <h2 class="ablog-post-title">
-      <a href="../../../posts/2021/weather-station-data-preprocess/"
-        >Processing Data from the NCAR Mesa Lab Weather Station</a
-      >
+      <a href="../../../posts/2021/weather-station-data-preprocess/">Processing Data from the NCAR Mesa Lab Weather Station</a>
     </h2>
 
     <ul class="ablog-archive">
@@ -444,21 +591,19 @@ commentsRunWhenDOMLoaded(addUtterances);
       </li>
        
 <li id="author">
-  <span
-    ><i class="fa-fw fa fa-user"></i></span
+  <span><i class="fa-fw fa fa-user"></i></span
   >
    
   <a href="#">Max Grover</a>  
 </li>
     
 <li id="tags">
-  <span
-    ><i class="fa-fw fa fa-tags"></i> </span
+  <span><i class="fa-fw fa fa-tags"></i> </span
   >
    
-  <a href="../../tag/xarray/">xarray</a>   
   <a href="../../tag/time/">time</a>   
-  <a href="../../tag/preprocess/">preprocess</a>  
+  <a href="../../tag/preprocess/">preprocess</a>   
+  <a href="../../tag/xarray/">xarray</a>  
 </li>
  
     </ul>
@@ -469,15 +614,13 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 
     <p class="ablog-post-expand"><a href="../../../posts/2021/weather-station-data-preprocess/"><em>Read more ...</em></a></p>
-    <hr />
+    <hr/>
   </div>
   
 
   <div class="section ablog-post">
     <h2 class="ablog-post-title">
-      <a href="../../../posts/2021/esds-update-october-2021/"
-        >ESDS Update October 2021</a
-      >
+      <a href="../../../posts/2021/esds-update-october-2021/">ESDS Update October 2021</a>
     </h2>
 
     <ul class="ablog-archive">
@@ -486,23 +629,21 @@ commentsRunWhenDOMLoaded(addUtterances);
       </li>
        
 <li id="author">
-  <span
-    ><i class="fa-fw fa fa-user"></i></span
+  <span><i class="fa-fw fa fa-user"></i></span
   >
    
   <a href="#">Max Grover</a>  
 </li>
     
 <li id="tags">
-  <span
-    ><i class="fa-fw fa fa-tags"></i> </span
+  <span><i class="fa-fw fa fa-tags"></i> </span
   >
    
-  <a href="../../tag/update/">update</a>   
-  <a href="../../tag/faq/">faq</a>   
-  <a href="../../tag/xarray/">xarray</a>   
   <a href="../../tag/dask/">dask</a>   
-  <a href="../../tag/matplotlib/">matplotlib</a>  
+  <a href="../../tag/matplotlib/">matplotlib</a>   
+  <a href="../../tag/xarray/">xarray</a>   
+  <a href="../../tag/update/">update</a>   
+  <a href="../../tag/faq/">faq</a>  
 </li>
  
     </ul>
@@ -513,15 +654,13 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 
     <p class="ablog-post-expand"><a href="../../../posts/2021/esds-update-october-2021/"><em>Read more ...</em></a></p>
-    <hr />
+    <hr/>
   </div>
   
 
   <div class="section ablog-post">
     <h2 class="ablog-post-title">
-      <a href="../../../posts/2021/intake-esm-derived-variables/"
-        >Using Intake-ESM's New Derived Variable Functionality</a
-      >
+      <a href="../../../posts/2021/intake-esm-derived-variables/">Using Intake-ESM's New Derived Variable Functionality</a>
     </h2>
 
     <ul class="ablog-archive">
@@ -530,21 +669,19 @@ commentsRunWhenDOMLoaded(addUtterances);
       </li>
        
 <li id="author">
-  <span
-    ><i class="fa-fw fa fa-user"></i></span
+  <span><i class="fa-fw fa fa-user"></i></span
   >
    
   <a href="#">Max Grover</a>  
 </li>
     
 <li id="tags">
-  <span
-    ><i class="fa-fw fa fa-tags"></i> </span
+  <span><i class="fa-fw fa fa-tags"></i> </span
   >
    
-  <a href="../../tag/intake/">intake</a>   
+  <a href="../../tag/cesm/">cesm</a>   
   <a href="../../tag/diagnostics/">diagnostics</a>   
-  <a href="../../tag/cesm/">cesm</a>  
+  <a href="../../tag/intake/">intake</a>  
 </li>
  
     </ul>
@@ -554,15 +691,13 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 
     <p class="ablog-post-expand"><a href="../../../posts/2021/intake-esm-derived-variables/"><em>Read more ...</em></a></p>
-    <hr />
+    <hr/>
   </div>
   
 
   <div class="section ablog-post">
     <h2 class="ablog-post-title">
-      <a href="../../../posts/2021/xarray-wrf-example/"
-        >Reading WRF data into Xarray and Visualizing the Output using hvPlot</a
-      >
+      <a href="../../../posts/2021/xarray-wrf-example/">Reading WRF data into Xarray and Visualizing the Output using hvPlot</a>
     </h2>
 
     <ul class="ablog-archive">
@@ -571,8 +706,7 @@ commentsRunWhenDOMLoaded(addUtterances);
       </li>
        
 <li id="author">
-  <span
-    ><i class="fa-fw fa fa-user"></i></span
+  <span><i class="fa-fw fa fa-user"></i></span
   >
    
   <a href="#">Max Grover</a>,   
@@ -580,13 +714,12 @@ commentsRunWhenDOMLoaded(addUtterances);
 </li>
     
 <li id="tags">
-  <span
-    ><i class="fa-fw fa fa-tags"></i> </span
+  <span><i class="fa-fw fa fa-tags"></i> </span
   >
    
-  <a href="../../tag/wrf/">WRF</a>   
   <a href="../../tag/visualization/">visualization</a>   
-  <a href="../../tag/dask/">dask</a>  
+  <a href="../../tag/dask/">dask</a>   
+  <a href="../../tag/wrf/">WRF</a>  
 </li>
  
     </ul>
@@ -597,15 +730,13 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 
     <p class="ablog-post-expand"><a href="../../../posts/2021/xarray-wrf-example/"><em>Read more ...</em></a></p>
-    <hr />
+    <hr/>
   </div>
   
 
   <div class="section ablog-post">
     <h2 class="ablog-post-title">
-      <a href="../../../posts/2021/kay-et-al-cesm2-le/"
-        >CESM2-Large Ensemble Reproduction of a Figure from Kay et al. 2015 Using Intake-ESM and hvPlot</a
-      >
+      <a href="../../../posts/2021/kay-et-al-cesm2-le/">CESM2-Large Ensemble Reproduction of a Figure from Kay et al. 2015 Using Intake-ESM and hvPlot</a>
     </h2>
 
     <ul class="ablog-archive">
@@ -614,23 +745,21 @@ commentsRunWhenDOMLoaded(addUtterances);
       </li>
        
 <li id="author">
-  <span
-    ><i class="fa-fw fa fa-user"></i></span
+  <span><i class="fa-fw fa fa-user"></i></span
   >
    
   <a href="#">Max Grover</a>  
 </li>
     
 <li id="tags">
-  <span
-    ><i class="fa-fw fa fa-tags"></i> </span
+  <span><i class="fa-fw fa fa-tags"></i> </span
   >
    
+  <a href="../../tag/visualization/">visualization</a>   
   <a href="../../tag/intake/">intake</a>   
-  <a href="../../tag/cesm2-le/">cesm2-le</a>   
-  <a href="../../tag/cesm/">cesm</a>   
   <a href="../../tag/diagnostics/">diagnostics</a>   
-  <a href="../../tag/visualization/">visualization</a>  
+  <a href="../../tag/cesm/">cesm</a>   
+  <a href="../../tag/cesm2-le/">cesm2-le</a>  
 </li>
  
     </ul>
@@ -641,15 +770,13 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 
     <p class="ablog-post-expand"><a href="../../../posts/2021/kay-et-al-cesm2-le/"><em>Read more ...</em></a></p>
-    <hr />
+    <hr/>
   </div>
   
 
   <div class="section ablog-post">
     <h2 class="ablog-post-title">
-      <a href="../../../posts/2021/esds-update-september-2021/"
-        >ESDS Progress Over the Past Few Months</a
-      >
+      <a href="../../../posts/2021/esds-update-september-2021/">ESDS Progress Over the Past Few Months</a>
     </h2>
 
     <ul class="ablog-archive">
@@ -658,16 +785,14 @@ commentsRunWhenDOMLoaded(addUtterances);
       </li>
        
 <li id="author">
-  <span
-    ><i class="fa-fw fa fa-user"></i></span
+  <span><i class="fa-fw fa fa-user"></i></span
   >
    
   <a href="#">Max Grover</a>  
 </li>
     
 <li id="tags">
-  <span
-    ><i
+  <span><i
       class="fa-fw fa fa-tag"
     ></i
     ></span
@@ -684,15 +809,13 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 
     <p class="ablog-post-expand"><a href="../../../posts/2021/esds-update-september-2021/"><em>Read more ...</em></a></p>
-    <hr />
+    <hr/>
   </div>
   
 
   <div class="section ablog-post">
     <h2 class="ablog-post-title">
-      <a href="../../../posts/2021/jupyter-based-diagnostics-overview/"
-        >Reimagining Diagnostics Through the Use of the Jupyter Ecosystem</a
-      >
+      <a href="../../../posts/2021/jupyter-based-diagnostics-overview/">Reimagining Diagnostics Through the Use of the Jupyter Ecosystem</a>
     </h2>
 
     <ul class="ablog-archive">
@@ -701,23 +824,21 @@ commentsRunWhenDOMLoaded(addUtterances);
       </li>
        
 <li id="author">
-  <span
-    ><i class="fa-fw fa fa-user"></i></span
+  <span><i class="fa-fw fa fa-user"></i></span
   >
    
   <a href="#">Max Grover</a>  
 </li>
     
 <li id="tags">
-  <span
-    ><i class="fa-fw fa fa-tags"></i> </span
+  <span><i class="fa-fw fa fa-tags"></i> </span
   >
    
+  <a href="../../tag/visualization/">visualization</a>   
+  <a href="../../tag/intake/">intake</a>   
   <a href="../../tag/diagnostics/">diagnostics</a>   
   <a href="../../tag/jupyter/">jupyter</a>   
-  <a href="../../tag/intake/">intake</a>   
-  <a href="../../tag/cesm/">cesm</a>   
-  <a href="../../tag/visualization/">visualization</a>  
+  <a href="../../tag/cesm/">cesm</a>  
 </li>
  
     </ul>
@@ -728,15 +849,13 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 
     <p class="ablog-post-expand"><a href="../../../posts/2021/jupyter-based-diagnostics-overview/"><em>Read more ...</em></a></p>
-    <hr />
+    <hr/>
   </div>
   
 
   <div class="section ablog-post">
     <h2 class="ablog-post-title">
-      <a href="../../../posts/2021/benchmarking-history-timeseries-intake/"
-        >Benchmarking Performance of History vs. Timeseries Files</a
-      >
+      <a href="../../../posts/2021/benchmarking-history-timeseries-intake/">Benchmarking Performance of History vs. Timeseries Files</a>
     </h2>
 
     <ul class="ablog-archive">
@@ -745,22 +864,20 @@ commentsRunWhenDOMLoaded(addUtterances);
       </li>
        
 <li id="author">
-  <span
-    ><i class="fa-fw fa fa-user"></i></span
+  <span><i class="fa-fw fa fa-user"></i></span
   >
    
   <a href="#">Max Grover</a>  
 </li>
     
 <li id="tags">
-  <span
-    ><i class="fa-fw fa fa-tags"></i> </span
+  <span><i class="fa-fw fa fa-tags"></i> </span
   >
    
-  <a href="../../tag/ecgtools/">ecgtools</a>   
   <a href="../../tag/intake/">intake</a>   
   <a href="../../tag/dask/">dask</a>   
   <a href="../../tag/cesm/">cesm</a>   
+  <a href="../../tag/ecgtools/">ecgtools</a>   
   <a href="../../tag/benchmark/">benchmark</a>  
 </li>
  
@@ -771,15 +888,13 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 
     <p class="ablog-post-expand"><a href="../../../posts/2021/benchmarking-history-timeseries-intake/"><em>Read more ...</em></a></p>
-    <hr />
+    <hr/>
   </div>
   
 
   <div class="section ablog-post">
     <h2 class="ablog-post-title">
-      <a href="../../../posts/2021/regrid-observations-pop-grid/"
-        >Regridding High Resolution Observations to a High Resolution Model Grid</a
-      >
+      <a href="../../../posts/2021/regrid-observations-pop-grid/">Regridding High Resolution Observations to a High Resolution Model Grid</a>
     </h2>
 
     <ul class="ablog-archive">
@@ -788,21 +903,19 @@ commentsRunWhenDOMLoaded(addUtterances);
       </li>
        
 <li id="author">
-  <span
-    ><i class="fa-fw fa fa-user"></i></span
+  <span><i class="fa-fw fa fa-user"></i></span
   >
    
   <a href="#">Max Grover</a>  
 </li>
     
 <li id="tags">
-  <span
-    ><i class="fa-fw fa fa-tags"></i> </span
+  <span><i class="fa-fw fa fa-tags"></i> </span
   >
    
-  <a href="../../tag/diagnostics/">diagnostics</a>   
-  <a href="../../tag/observations/">observations</a>   
   <a href="../../tag/cesm/">cesm</a>   
+  <a href="../../tag/observations/">observations</a>   
+  <a href="../../tag/diagnostics/">diagnostics</a>   
   <a href="../../tag/intake/">intake</a>  
 </li>
  
@@ -810,18 +923,17 @@ commentsRunWhenDOMLoaded(addUtterances);
     <div class="ablog-post-excerpt docutils container">
 <p>In this example, we will cover how to leverage a useful package from the <a class="reference external" href="http://www.pangeo.io">Pangeo Ecosystem</a>, <a class="reference external" href="https://pangeo-xesmf.readthedocs.io/en/latest/">xESMF</a>. One important note when using this package, is <strong>make sure you are using the most up-to-date documentation/version</strong>, a few years ago, development moved to the <a class="reference external" href="https://github.com/pangeo-data/xESMF">pangeo-data</a> branch of the package, installable using the following:</p>
 <p>For this example, we will download a file from the <a class="reference external" href="https://www.ncei.noaa.gov/products/world-ocean-atlas">World Ocean Atlas</a>, which includes a variety of ocean observations assembled from the World Ocean Database.</p>
+<img alt="../../../_images/5d1735a9cd17c21c74dd23dc6b8463e12d0a07af0cbb389b5a01c91e30c7141c.png" src="../../../_images/5d1735a9cd17c21c74dd23dc6b8463e12d0a07af0cbb389b5a01c91e30c7141c.png" />
 </div>
 
     <p class="ablog-post-expand"><a href="../../../posts/2021/regrid-observations-pop-grid/"><em>Read more ...</em></a></p>
-    <hr />
+    <hr/>
   </div>
   
 
   <div class="section ablog-post">
     <h2 class="ablog-post-title">
-      <a href="../../../posts/2021/intake-obs-cesm2le-comparison/"
-        >Comparing Atmospheric Model Output with Observations Using Intake-ESM</a
-      >
+      <a href="../../../posts/2021/intake-obs-cesm2le-comparison/">Comparing Atmospheric Model Output with Observations Using Intake-ESM</a>
     </h2>
 
     <ul class="ablog-archive">
@@ -830,21 +942,19 @@ commentsRunWhenDOMLoaded(addUtterances);
       </li>
        
 <li id="author">
-  <span
-    ><i class="fa-fw fa fa-user"></i></span
+  <span><i class="fa-fw fa fa-user"></i></span
   >
    
   <a href="#">Max Grover</a>  
 </li>
     
 <li id="tags">
-  <span
-    ><i class="fa-fw fa fa-tags"></i> </span
+  <span><i class="fa-fw fa fa-tags"></i> </span
   >
    
-  <a href="../../tag/intake/">intake</a>   
   <a href="../../tag/observations/">observations</a>   
-  <a href="../../tag/cesm2-le/">cesm2-le</a>  
+  <a href="../../tag/cesm2-le/">cesm2-le</a>   
+  <a href="../../tag/intake/">intake</a>  
 </li>
  
     </ul>
@@ -854,15 +964,13 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 
     <p class="ablog-post-expand"><a href="../../../posts/2021/intake-obs-cesm2le-comparison/"><em>Read more ...</em></a></p>
-    <hr />
+    <hr/>
   </div>
   
 
   <div class="section ablog-post">
     <h2 class="ablog-post-title">
-      <a href="../../../posts/2021/intake-esm-holoviews-diagnostics/"
-        >Examining Diagnostics Using Intake-ESM and hvPlot</a
-      >
+      <a href="../../../posts/2021/intake-esm-holoviews-diagnostics/">Examining Diagnostics Using Intake-ESM and hvPlot</a>
     </h2>
 
     <ul class="ablog-archive">
@@ -871,22 +979,20 @@ commentsRunWhenDOMLoaded(addUtterances);
       </li>
        
 <li id="author">
-  <span
-    ><i class="fa-fw fa fa-user"></i></span
+  <span><i class="fa-fw fa fa-user"></i></span
   >
    
   <a href="#">Max Grover</a>  
 </li>
     
 <li id="tags">
-  <span
-    ><i class="fa-fw fa fa-tags"></i> </span
+  <span><i class="fa-fw fa fa-tags"></i> </span
   >
    
   <a href="../../tag/cesm/">cesm</a>   
-  <a href="../../tag/intake/">intake</a>   
   <a href="../../tag/visualization/">visualization</a>   
-  <a href="../../tag/diagnostics/">diagnostics</a>  
+  <a href="../../tag/diagnostics/">diagnostics</a>   
+  <a href="../../tag/intake/">intake</a>  
 </li>
  
     </ul>
@@ -896,15 +1002,13 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 
     <p class="ablog-post-expand"><a href="../../../posts/2021/intake-esm-holoviews-diagnostics/"><em>Read more ...</em></a></p>
-    <hr />
+    <hr/>
   </div>
   
 
   <div class="section ablog-post">
     <h2 class="ablog-post-title">
-      <a href="../../../posts/2021/cesm-datashader/"
-        >Plotting CESM Data on an Unstructured Grid using Geoviews and Datashader</a
-      >
+      <a href="../../../posts/2021/cesm-datashader/">Plotting CESM Data on an Unstructured Grid using Geoviews and Datashader</a>
     </h2>
 
     <ul class="ablog-archive">
@@ -913,16 +1017,14 @@ commentsRunWhenDOMLoaded(addUtterances);
       </li>
        
 <li id="author">
-  <span
-    ><i class="fa-fw fa fa-user"></i></span
+  <span><i class="fa-fw fa fa-user"></i></span
   >
    
   <a href="#">Max Grover</a>  
 </li>
     
 <li id="tags">
-  <span
-    ><i class="fa-fw fa fa-tags"></i> </span
+  <span><i class="fa-fw fa fa-tags"></i> </span
   >
    
   <a href="../../tag/unstructured-grids/">unstructured grids</a>   
@@ -937,15 +1039,13 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 
     <p class="ablog-post-expand"><a href="../../../posts/2021/cesm-datashader/"><em>Read more ...</em></a></p>
-    <hr />
+    <hr/>
   </div>
   
 
   <div class="section ablog-post">
     <h2 class="ablog-post-title">
-      <a href="../../../posts/2021/intake-cesm2-le-glade-example/"
-        >Using Intake-ESM to Analyze Data from CESM2-LE</a
-      >
+      <a href="../../../posts/2021/intake-cesm2-le-glade-example/">Using Intake-ESM to Analyze Data from CESM2-LE</a>
     </h2>
 
     <ul class="ablog-archive">
@@ -954,21 +1054,19 @@ commentsRunWhenDOMLoaded(addUtterances);
       </li>
        
 <li id="author">
-  <span
-    ><i class="fa-fw fa fa-user"></i></span
+  <span><i class="fa-fw fa fa-user"></i></span
   >
    
   <a href="#">Max Grover</a>  
 </li>
     
 <li id="tags">
-  <span
-    ><i class="fa-fw fa fa-tags"></i> </span
+  <span><i class="fa-fw fa fa-tags"></i> </span
   >
    
-  <a href="../../tag/intake/">intake</a>   
   <a href="../../tag/cesm/">cesm</a>   
-  <a href="../../tag/cesm2-le/">cesm2-le</a>  
+  <a href="../../tag/cesm2-le/">cesm2-le</a>   
+  <a href="../../tag/intake/">intake</a>  
 </li>
  
     </ul>
@@ -979,15 +1077,13 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 
     <p class="ablog-post-expand"><a href="../../../posts/2021/intake-cesm2-le-glade-example/"><em>Read more ...</em></a></p>
-    <hr />
+    <hr/>
   </div>
   
 
   <div class="section ablog-post">
     <h2 class="ablog-post-title">
-      <a href="../../../posts/2021/project-pythia-overview/"
-        >Project Pythia Portal Overview</a
-      >
+      <a href="../../../posts/2021/project-pythia-overview/">Project Pythia Portal Overview</a>
     </h2>
 
     <ul class="ablog-archive">
@@ -996,21 +1092,19 @@ commentsRunWhenDOMLoaded(addUtterances);
       </li>
        
 <li id="author">
-  <span
-    ><i class="fa-fw fa fa-user"></i></span
+  <span><i class="fa-fw fa fa-user"></i></span
   >
    
   <a href="#">Max Grover</a>  
 </li>
     
 <li id="tags">
-  <span
-    ><i class="fa-fw fa fa-tags"></i> </span
+  <span><i class="fa-fw fa fa-tags"></i> </span
   >
    
+  <a href="../../tag/education/">education</a>   
   <a href="../../tag/pythia/">pythia</a>   
-  <a href="../../tag/training/">training</a>   
-  <a href="../../tag/education/">education</a>  
+  <a href="../../tag/training/">training</a>  
 </li>
  
     </ul>
@@ -1021,15 +1115,13 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 
     <p class="ablog-post-expand"><a href="../../../posts/2021/project-pythia-overview/"><em>Read more ...</em></a></p>
-    <hr />
+    <hr/>
   </div>
   
 
   <div class="section ablog-post">
     <h2 class="ablog-post-title">
-      <a href="../../../posts/2021/scipy-2021-takeaways/"
-        >SciPy Conference 2021 Takeaways</a
-      >
+      <a href="../../../posts/2021/scipy-2021-takeaways/">SciPy Conference 2021 Takeaways</a>
     </h2>
 
     <ul class="ablog-archive">
@@ -1038,21 +1130,19 @@ commentsRunWhenDOMLoaded(addUtterances);
       </li>
        
 <li id="author">
-  <span
-    ><i class="fa-fw fa fa-user"></i></span
+  <span><i class="fa-fw fa fa-user"></i></span
   >
    
   <a href="#">Max Grover</a>  
 </li>
     
 <li id="tags">
-  <span
-    ><i class="fa-fw fa fa-tags"></i> </span
+  <span><i class="fa-fw fa fa-tags"></i> </span
   >
    
-  <a href="../../tag/conference/">conference</a>   
+  <a href="../../tag/open-source/">open-source</a>   
   <a href="../../tag/scipy/">scipy</a>   
-  <a href="../../tag/open-source/">open-source</a>  
+  <a href="../../tag/conference/">conference</a>  
 </li>
  
     </ul>
@@ -1062,15 +1152,13 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 
     <p class="ablog-post-expand"><a href="../../../posts/2021/scipy-2021-takeaways/"><em>Read more ...</em></a></p>
-    <hr />
+    <hr/>
   </div>
   
 
   <div class="section ablog-post">
     <h2 class="ablog-post-title">
-      <a href="../../../posts/2021/scaling-with-dask-class-takeaways/"
-        >Scaling Python with Dask Class Takeaways</a
-      >
+      <a href="../../../posts/2021/scaling-with-dask-class-takeaways/">Scaling Python with Dask Class Takeaways</a>
     </h2>
 
     <ul class="ablog-archive">
@@ -1079,16 +1167,14 @@ commentsRunWhenDOMLoaded(addUtterances);
       </li>
        
 <li id="author">
-  <span
-    ><i class="fa-fw fa fa-user"></i></span
+  <span><i class="fa-fw fa fa-user"></i></span
   >
    
   <a href="#">Max Grover</a>  
 </li>
     
 <li id="tags">
-  <span
-    ><i class="fa-fw fa fa-tags"></i> </span
+  <span><i class="fa-fw fa fa-tags"></i> </span
   >
    
   <a href="../../tag/dask/">dask</a>   
@@ -1103,15 +1189,13 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 
     <p class="ablog-post-expand"><a href="../../../posts/2021/scaling-with-dask-class-takeaways/"><em>Read more ...</em></a></p>
-    <hr />
+    <hr/>
   </div>
   
 
   <div class="section ablog-post">
     <h2 class="ablog-post-title">
-      <a href="../../../posts/2021/model_documentation_jupyterbook/"
-        >Creating Model Documentation Using Jupyterbook and Intake-esm</a
-      >
+      <a href="../../../posts/2021/model_documentation_jupyterbook/">Creating Model Documentation Using Jupyterbook and Intake-esm</a>
     </h2>
 
     <ul class="ablog-archive">
@@ -1120,22 +1204,20 @@ commentsRunWhenDOMLoaded(addUtterances);
       </li>
        
 <li id="author">
-  <span
-    ><i class="fa-fw fa fa-user"></i></span
+  <span><i class="fa-fw fa fa-user"></i></span
   >
    
   <a href="#">Max Grover</a>  
 </li>
     
 <li id="tags">
-  <span
-    ><i class="fa-fw fa fa-tags"></i> </span
+  <span><i class="fa-fw fa fa-tags"></i> </span
   >
    
-  <a href="../../tag/jupyter/">jupyter</a>   
+  <a href="../../tag/documentation/">documentation</a>   
   <a href="../../tag/cesm/">cesm</a>   
-  <a href="../../tag/intake/">intake</a>   
-  <a href="../../tag/documentation/">documentation</a>  
+  <a href="../../tag/jupyter/">jupyter</a>   
+  <a href="../../tag/intake/">intake</a>  
 </li>
  
     </ul>
@@ -1146,15 +1228,13 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 
     <p class="ablog-post-expand"><a href="../../../posts/2021/model_documentation_jupyterbook/"><em>Read more ...</em></a></p>
-    <hr />
+    <hr/>
   </div>
   
 
   <div class="section ablog-post">
     <h2 class="ablog-post-title">
-      <a href="../../../posts/2021/cesm-workshop-2021-diagnostics/"
-        >CESM Diagnostics Discussion</a
-      >
+      <a href="../../../posts/2021/cesm-workshop-2021-diagnostics/">CESM Diagnostics Discussion</a>
     </h2>
 
     <ul class="ablog-archive">
@@ -1163,16 +1243,14 @@ commentsRunWhenDOMLoaded(addUtterances);
       </li>
        
 <li id="author">
-  <span
-    ><i class="fa-fw fa fa-user"></i></span
+  <span><i class="fa-fw fa fa-user"></i></span
   >
    
   <a href="#">Max Grover</a>  
 </li>
     
 <li id="tags">
-  <span
-    ><i class="fa-fw fa fa-tags"></i> </span
+  <span><i class="fa-fw fa fa-tags"></i> </span
   >
    
   <a href="../../tag/cesm/">cesm</a>   
@@ -1187,15 +1265,13 @@ commentsRunWhenDOMLoaded(addUtterances);
 <img alt="diagnostics_image" src="../../../_images/cesm-diagnostics.svg" /></div>
 
     <p class="ablog-post-expand"><a href="../../../posts/2021/cesm-workshop-2021-diagnostics/"><em>Read more ...</em></a></p>
-    <hr />
+    <hr/>
   </div>
   
 
   <div class="section ablog-post">
     <h2 class="ablog-post-title">
-      <a href="../../../posts/2021/graphviz_example/"
-        >Creating Visualizations of Intake-ESM Catalogs</a
-      >
+      <a href="../../../posts/2021/graphviz_example/">Creating Visualizations of Intake-ESM Catalogs</a>
     </h2>
 
     <ul class="ablog-archive">
@@ -1204,39 +1280,35 @@ commentsRunWhenDOMLoaded(addUtterances);
       </li>
        
 <li id="author">
-  <span
-    ><i class="fa-fw fa fa-user"></i></span
+  <span><i class="fa-fw fa fa-user"></i></span
   >
    
   <a href="#">Max Grover</a>  
 </li>
     
 <li id="tags">
-  <span
-    ><i class="fa-fw fa fa-tags"></i> </span
+  <span><i class="fa-fw fa fa-tags"></i> </span
   >
    
+  <a href="../../tag/cesm/">cesm</a>   
   <a href="../../tag/visualization/">visualization</a>   
-  <a href="../../tag/intake/">intake</a>   
-  <a href="../../tag/cesm/">cesm</a>  
+  <a href="../../tag/intake/">intake</a>  
 </li>
  
     </ul>
     <div class="ablog-post-excerpt docutils container">
 <p>A common initial task when working with a new dataset is figuring out what data is available. This is especially true when working with climate ensembles with several components and time-frequency output (ex. Community Earth System Model Large Ensemble, CESM-LE). Here, we will examine different methods of investigating this catalog</p>
 <p>Here, we will use <a class="reference external" href="https://intake-esm.readthedocs.io/en/latest/">intake-esm</a> and <a class="reference external" href="https://graphviz.readthedocs.io/en/stable/manual.html">graphviz</a>, which can be installed using the following (including jupyterlab too!)</p>
-</div>
+<img alt="../../../_images/e696afcdb2fcbec7e9268399b9609587a5f0f51f6c5249afe3b3a0fcd46f0376.svg" src="../../../_images/e696afcdb2fcbec7e9268399b9609587a5f0f51f6c5249afe3b3a0fcd46f0376.svg" /></div>
 
     <p class="ablog-post-expand"><a href="../../../posts/2021/graphviz_example/"><em>Read more ...</em></a></p>
-    <hr />
+    <hr/>
   </div>
   
 
   <div class="section ablog-post">
     <h2 class="ablog-post-title">
-      <a href="../../../posts/2021/ecgtools-history-files-example/"
-        >Building an Intake-esm catalog from CESM2 History Files</a
-      >
+      <a href="../../../posts/2021/ecgtools-history-files-example/">Building an Intake-esm catalog from CESM2 History Files</a>
     </h2>
 
     <ul class="ablog-archive">
@@ -1245,38 +1317,35 @@ commentsRunWhenDOMLoaded(addUtterances);
       </li>
        
 <li id="author">
-  <span
-    ><i class="fa-fw fa fa-user"></i></span
+  <span><i class="fa-fw fa fa-user"></i></span
   >
    
   <a href="#">Max Grover</a>  
 </li>
     
 <li id="tags">
-  <span
-    ><i class="fa-fw fa fa-tags"></i> </span
+  <span><i class="fa-fw fa fa-tags"></i> </span
   >
    
-  <a href="../../tag/intake/">intake</a>   
-  <a href="../../tag/cesm/">cesm</a>  
+  <a href="../../tag/cesm/">cesm</a>   
+  <a href="../../tag/intake/">intake</a>  
 </li>
  
     </ul>
     <div class="ablog-post-excerpt docutils container">
 <p>As mentioned in a couple of ESDS posts (<a class="reference external" href="https://ncar.github.io/esds/posts/intake_esm_dask/">intake-esm and Dask</a>, <a class="reference external" href="https://ncar.github.io/esds/posts/intake_cmip6_debug/">debugging intake-esm</a>), <a class="reference external" href="https://intake-esm.readthedocs.io/en/latest/">intake-esm</a> can be a helpful tool to work with when dealing with model data, especially CESM. One of the requirements for using intake-esm is having a catalog which is comprised of two pieces:</p>
 <p>A table of the relevant metadata (ex. file path, variable, stream, etc.)</p>
+<img alt="../../../_images/c844fe1ce42eb01887e1c4c239c0dff261f07ec69b4f44a736a1e1a020b82d45.png" src="../../../_images/c844fe1ce42eb01887e1c4c239c0dff261f07ec69b4f44a736a1e1a020b82d45.png" />
 </div>
 
     <p class="ablog-post-expand"><a href="../../../posts/2021/ecgtools-history-files-example/"><em>Read more ...</em></a></p>
-    <hr />
+    <hr/>
   </div>
   
 
   <div class="section ablog-post">
     <h2 class="ablog-post-title">
-      <a href="../../../posts/2021/dask-summit-takeaway/"
-        >Dask Distributed Summit 2021 Takeaways</a
-      >
+      <a href="../../../posts/2021/dask-summit-takeaway/">Dask Distributed Summit 2021 Takeaways</a>
     </h2>
 
     <ul class="ablog-archive">
@@ -1285,21 +1354,19 @@ commentsRunWhenDOMLoaded(addUtterances);
       </li>
        
 <li id="author">
-  <span
-    ><i class="fa-fw fa fa-user"></i></span
+  <span><i class="fa-fw fa fa-user"></i></span
   >
    
   <a href="#">Max Grover</a>  
 </li>
     
 <li id="tags">
-  <span
-    ><i class="fa-fw fa fa-tags"></i> </span
+  <span><i class="fa-fw fa fa-tags"></i> </span
   >
    
+  <a href="../../tag/open-science/">open-science</a>   
   <a href="../../tag/dask/">dask</a>   
-  <a href="../../tag/conference/">conference</a>   
-  <a href="../../tag/open-science/">open-science</a>  
+  <a href="../../tag/conference/">conference</a>  
 </li>
  
     </ul>
@@ -1309,15 +1376,13 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 
     <p class="ablog-post-expand"><a href="../../../posts/2021/dask-summit-takeaway/"><em>Read more ...</em></a></p>
-    <hr />
+    <hr/>
   </div>
   
 
   <div class="section ablog-post">
     <h2 class="ablog-post-title">
-      <a href="../../../posts/2021/intake_cmip6_debug/"
-        >Debugging Intake-ESM Process for Reading in CMIP6</a
-      >
+      <a href="../../../posts/2021/intake_cmip6_debug/">Debugging Intake-ESM Process for Reading in CMIP6</a>
     </h2>
 
     <ul class="ablog-archive">
@@ -1326,21 +1391,19 @@ commentsRunWhenDOMLoaded(addUtterances);
       </li>
        
 <li id="author">
-  <span
-    ><i class="fa-fw fa fa-user"></i></span
+  <span><i class="fa-fw fa fa-user"></i></span
   >
    
   <a href="#">Max Grover</a>  
 </li>
     
 <li id="tags">
-  <span
-    ><i class="fa-fw fa fa-tags"></i> </span
+  <span><i class="fa-fw fa fa-tags"></i> </span
   >
    
-  <a href="../../tag/intake/">intake</a>   
+  <a href="../../tag/debug/">debug</a>   
   <a href="../../tag/cmip6/">cmip6</a>   
-  <a href="../../tag/debug/">debug</a>  
+  <a href="../../tag/intake/">intake</a>  
 </li>
  
     </ul>
@@ -1350,15 +1413,13 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 
     <p class="ablog-post-expand"><a href="../../../posts/2021/intake_cmip6_debug/"><em>Read more ...</em></a></p>
-    <hr />
+    <hr/>
   </div>
   
 
   <div class="section ablog-post">
     <h2 class="ablog-post-title">
-      <a href="../../../posts/2021/paired_programming_vs/"
-        >Paired Programming using VS Code</a
-      >
+      <a href="../../../posts/2021/paired_programming_vs/">Paired Programming using VS Code</a>
     </h2>
 
     <ul class="ablog-archive">
@@ -1367,21 +1428,19 @@ commentsRunWhenDOMLoaded(addUtterances);
       </li>
        
 <li id="author">
-  <span
-    ><i class="fa-fw fa fa-user"></i></span
+  <span><i class="fa-fw fa fa-user"></i></span
   >
    
   <a href="#">Max Grover</a>  
 </li>
     
 <li id="tags">
-  <span
-    ><i class="fa-fw fa fa-tags"></i> </span
+  <span><i class="fa-fw fa fa-tags"></i> </span
   >
    
   <a href="../../tag/editor/">editor</a>   
-  <a href="../../tag/paired-programming/">paired-programming</a>   
-  <a href="../../tag/remote-access/">remote-access</a>  
+  <a href="../../tag/remote-access/">remote-access</a>   
+  <a href="../../tag/paired-programming/">paired-programming</a>  
 </li>
  
     </ul>
@@ -1391,15 +1450,13 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 
     <p class="ablog-post-expand"><a href="../../../posts/2021/paired_programming_vs/"><em>Read more ...</em></a></p>
-    <hr />
+    <hr/>
   </div>
   
 
   <div class="section ablog-post">
     <h2 class="ablog-post-title">
-      <a href="../../../posts/2021/map_blocks_example/"
-        >How to Use xarray.map_blocks for Vertical Interpolation of a 3D Field</a
-      >
+      <a href="../../../posts/2021/map_blocks_example/">How to Use xarray.map_blocks for Vertical Interpolation of a 3D Field</a>
     </h2>
 
     <ul class="ablog-archive">
@@ -1408,22 +1465,20 @@ commentsRunWhenDOMLoaded(addUtterances);
       </li>
        
 <li id="author">
-  <span
-    ><i class="fa-fw fa fa-user"></i></span
+  <span><i class="fa-fw fa fa-user"></i></span
   >
    
-  <a href="../matt-long/">Matt Long</a>,   
-  <a href="#">Max Grover</a>  
+  <a href="#">Max Grover</a>,   
+  <a href="../matt-long/">Matt Long</a>  
 </li>
     
 <li id="tags">
-  <span
-    ><i class="fa-fw fa fa-tags"></i> </span
+  <span><i class="fa-fw fa fa-tags"></i> </span
   >
    
+  <a href="../../tag/pop/">pop</a>   
   <a href="../../tag/xarray/">xarray</a>   
-  <a href="../../tag/dask/">dask</a>   
-  <a href="../../tag/pop/">pop</a>  
+  <a href="../../tag/dask/">dask</a>  
 </li>
  
     </ul>
@@ -1434,15 +1489,13 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 
     <p class="ablog-post-expand"><a href="../../../posts/2021/map_blocks_example/"><em>Read more ...</em></a></p>
-    <hr />
+    <hr/>
   </div>
   
 
   <div class="section ablog-post">
     <h2 class="ablog-post-title">
-      <a href="../../../posts/2021/multiple_index_xarray_xoak/"
-        >Indexing unstructured grids with the Power of Xoak</a
-      >
+      <a href="../../../posts/2021/multiple_index_xarray_xoak/">Indexing unstructured grids with the Power of Xoak</a>
     </h2>
 
     <ul class="ablog-archive">
@@ -1451,21 +1504,19 @@ commentsRunWhenDOMLoaded(addUtterances);
       </li>
        
 <li id="author">
-  <span
-    ><i class="fa-fw fa fa-user"></i></span
+  <span><i class="fa-fw fa fa-user"></i></span
   >
    
   <a href="#">Max Grover</a>  
 </li>
     
 <li id="tags">
-  <span
-    ><i class="fa-fw fa fa-tags"></i> </span
+  <span><i class="fa-fw fa fa-tags"></i> </span
   >
    
+  <a href="../../tag/">index</a>   
   <a href="../../tag/xarray/">xarray</a>   
-  <a href="../../tag/xoak/">xoak</a>   
-  <a href="../../tag/">index</a>  
+  <a href="../../tag/xoak/">xoak</a>  
 </li>
  
     </ul>
@@ -1475,15 +1526,13 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 
     <p class="ablog-post-expand"><a href="../../../posts/2021/multiple_index_xarray_xoak/"><em>Read more ...</em></a></p>
-    <hr />
+    <hr/>
   </div>
   
 
   <div class="section ablog-post">
     <h2 class="ablog-post-title">
-      <a href="../../../posts/2021/ncar-jobqueue-example/"
-        >NCAR-Jobqueue</a
-      >
+      <a href="../../../posts/2021/ncar-jobqueue-example/">NCAR-Jobqueue</a>
     </h2>
 
     <ul class="ablog-archive">
@@ -1492,21 +1541,19 @@ commentsRunWhenDOMLoaded(addUtterances);
       </li>
        
 <li id="author">
-  <span
-    ><i class="fa-fw fa fa-user"></i></span
+  <span><i class="fa-fw fa fa-user"></i></span
   >
    
   <a href="#">Max Grover</a>  
 </li>
     
 <li id="tags">
-  <span
-    ><i class="fa-fw fa fa-tags"></i> </span
+  <span><i class="fa-fw fa fa-tags"></i> </span
   >
    
+  <a href="../../tag/ncar/">ncar</a>   
   <a href="../../tag/jupyterhub/">jupyterhub</a>   
-  <a href="../../tag/dask/">dask</a>   
-  <a href="../../tag/ncar/">ncar</a>  
+  <a href="../../tag/dask/">dask</a>  
 </li>
  
     </ul>
@@ -1516,15 +1563,13 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 
     <p class="ablog-post-expand"><a href="../../../posts/2021/ncar-jobqueue-example/"><em>Read more ...</em></a></p>
-    <hr />
+    <hr/>
   </div>
   
 
   <div class="section ablog-post">
     <h2 class="ablog-post-title">
-      <a href="../../../posts/2021/intake_esm_dask/"
-        >An Example of Using Intake-ESM</a
-      >
+      <a href="../../../posts/2021/intake_esm_dask/">An Example of Using Intake-ESM</a>
     </h2>
 
     <ul class="ablog-archive">
@@ -1533,21 +1578,19 @@ commentsRunWhenDOMLoaded(addUtterances);
       </li>
        
 <li id="author">
-  <span
-    ><i class="fa-fw fa fa-user"></i></span
+  <span><i class="fa-fw fa fa-user"></i></span
   >
    
   <a href="#">Max Grover</a>  
 </li>
     
 <li id="tags">
-  <span
-    ><i class="fa-fw fa fa-tags"></i> </span
+  <span><i class="fa-fw fa fa-tags"></i> </span
   >
    
+  <a href="../../tag/cesm/">cesm</a>   
   <a href="../../tag/dask/">dask</a>   
-  <a href="../../tag/intake/">intake</a>   
-  <a href="../../tag/cesm/">cesm</a>  
+  <a href="../../tag/intake/">intake</a>  
 </li>
  
     </ul>
@@ -1557,15 +1600,13 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 
     <p class="ablog-post-expand"><a href="../../../posts/2021/intake_esm_dask/"><em>Read more ...</em></a></p>
-    <hr />
+    <hr/>
   </div>
   
 
   <div class="section ablog-post">
     <h2 class="ablog-post-title">
-      <a href="../../../posts/2021/casper_pbs_dask/"
-        >Using Dask on the New Casper PBS Scheduler</a
-      >
+      <a href="../../../posts/2021/casper_pbs_dask/">Using Dask on the New Casper PBS Scheduler</a>
     </h2>
 
     <ul class="ablog-archive">
@@ -1574,16 +1615,14 @@ commentsRunWhenDOMLoaded(addUtterances);
       </li>
        
 <li id="author">
-  <span
-    ><i class="fa-fw fa fa-user"></i></span
+  <span><i class="fa-fw fa fa-user"></i></span
   >
    
   <a href="#">Max Grover</a>  
 </li>
     
 <li id="tags">
-  <span
-    ><i class="fa-fw fa fa-tags"></i> </span
+  <span><i class="fa-fw fa fa-tags"></i> </span
   >
    
   <a href="../../tag/jupyterhub/">jupyterhub</a>   
@@ -1597,15 +1636,13 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 
     <p class="ablog-post-expand"><a href="../../../posts/2021/casper_pbs_dask/"><em>Read more ...</em></a></p>
-    <hr />
+    <hr/>
   </div>
   
 
   <div class="section ablog-post">
     <h2 class="ablog-post-title">
-      <a href="../../../posts/2021/software-citation/"
-        >The Importance of Software Citation</a
-      >
+      <a href="../../../posts/2021/software-citation/">The Importance of Software Citation</a>
     </h2>
 
     <ul class="ablog-archive">
@@ -1614,21 +1651,19 @@ commentsRunWhenDOMLoaded(addUtterances);
       </li>
        
 <li id="author">
-  <span
-    ><i class="fa-fw fa fa-user"></i></span
+  <span><i class="fa-fw fa fa-user"></i></span
   >
    
   <a href="#">Max Grover</a>  
 </li>
     
 <li id="tags">
-  <span
-    ><i class="fa-fw fa fa-tags"></i> </span
+  <span><i class="fa-fw fa fa-tags"></i> </span
   >
    
-  <a href="../../tag/open-science/">open-science</a>   
   <a href="../../tag/citation/">citation</a>   
-  <a href="../../tag/software/">software</a>  
+  <a href="../../tag/software/">software</a>   
+  <a href="../../tag/open-science/">open-science</a>  
 </li>
  
     </ul>
@@ -1638,15 +1673,13 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 
     <p class="ablog-post-expand"><a href="../../../posts/2021/software-citation/"><em>Read more ...</em></a></p>
-    <hr />
+    <hr/>
   </div>
   
 
   <div class="section ablog-post">
     <h2 class="ablog-post-title">
-      <a href="../../../posts/2021/esds-blog/"
-        >NCAR-CGD ESDS Town Hall</a
-      >
+      <a href="../../../posts/2021/esds-blog/">NCAR-CGD ESDS Town Hall</a>
     </h2>
 
     <ul class="ablog-archive">
@@ -1655,21 +1688,19 @@ commentsRunWhenDOMLoaded(addUtterances);
       </li>
        
 <li id="author">
-  <span
-    ><i class="fa-fw fa fa-user"></i></span
+  <span><i class="fa-fw fa fa-user"></i></span
   >
    
   <a href="#">Max Grover</a>  
 </li>
     
 <li id="tags">
-  <span
-    ><i class="fa-fw fa fa-tags"></i> </span
+  <span><i class="fa-fw fa fa-tags"></i> </span
   >
    
-  <a href="../../tag/townhall/">townhall</a>   
+  <a href="../../tag/questions/">questions</a>   
   <a href="../../tag/cgd/">cgd</a>   
-  <a href="../../tag/questions/">questions</a>  
+  <a href="../../tag/townhall/">townhall</a>  
 </li>
  
     </ul>
@@ -1679,15 +1710,13 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 
     <p class="ablog-post-expand"><a href="../../../posts/2021/esds-blog/"><em>Read more ...</em></a></p>
-    <hr />
+    <hr/>
   </div>
   
 
   <div class="section ablog-post">
     <h2 class="ablog-post-title">
-      <a href="../../../posts/2021/Interactive_Dashboard/"
-        >HiRes-CESM Interactive Dashboard Example</a
-      >
+      <a href="../../../posts/2021/Interactive_Dashboard/">HiRes-CESM Interactive Dashboard Example</a>
     </h2>
 
     <ul class="ablog-archive">
@@ -1696,16 +1725,14 @@ commentsRunWhenDOMLoaded(addUtterances);
       </li>
        
 <li id="author">
-  <span
-    ><i class="fa-fw fa fa-user"></i></span
+  <span><i class="fa-fw fa fa-user"></i></span
   >
    
   <a href="#">Max Grover</a>  
 </li>
     
 <li id="tags">
-  <span
-    ><i class="fa-fw fa fa-tags"></i> </span
+  <span><i class="fa-fw fa fa-tags"></i> </span
   >
    
   <a href="../../tag/dashboard/">dashboard</a>   
@@ -1719,41 +1746,91 @@ commentsRunWhenDOMLoaded(addUtterances);
 <img alt="https://img.shields.io/badge/%E2%86%91_Deploy_to-Heroku-7056bf.svg" src="http://img.shields.io/badge/%E2%86%91_launch_dashboard_on-Heroku-7056bf.svg" /></div>
 
     <p class="ablog-post-expand"><a href="../../../posts/2021/Interactive_Dashboard/"><em>Read more ...</em></a></p>
-    <hr />
+    <hr/>
   </div>
    
 </div>
 
-              </div>
-              
-              
-              <!-- Previous / next buttons -->
+            </article>
+            
+            
+            
+            <footer class="bd-footer-article">
+                <!-- Previous / next buttons -->
 <div class='prev-next-area'>
 </div>
-              
-          </main>
+            </footer>
+            
+          </div>
           
-
-      </div>
-    </div>
+          
+          
+            <div class="bd-sidebar-secondary bd-toc">
+              
+<div class="toc-item">
   
-    <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
-  <div class="container">
-    
-    <div class="footer-item">
-      <p class="copyright">
-    &copy; Copyright 2021, NCAR Earth System Data Science Team.<br>
-</p>
+<div id="searchbox"></div>
+</div>
+
+<div class="toc-item">
+  
+</div>
+
+<div class="toc-item">
+  
+</div>
+
+            </div>
+          
+          
+        </div>
+        <footer class="bd-footer-content">
+          <div class="bd-footer-content__inner">
+            
+          </div>
+        </footer>
+        
+      </main>
     </div>
-    
-    <div class="footer-item">
-      <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
-</p>
-    </div>
-    
   </div>
-</footer>
+
+  
+    
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94"></script>
+
+  <footer class="bd-footer"><div class="bd-footer__inner container">
+  
+  <div class="footer-item">
+    
+<p class="copyright">
+
+    &copy; Copyright 2021, NCAR Earth System Data Science Team.<br>
+
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="theme-version">
+    Built with the
+    <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">
+        PyData Sphinx Theme
+    </a>
+    0.12.0.
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+<p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
+</p>
+
+  </div>
+  
+</div>
+  </footer>
   </body>
 </html>
